@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <g transform="translate(80, 80)">
+    <svg width="56" height="56" viewBox="0 0 1024 1024">
+      <rect width="1024" height="1024" rx="224" fill="#F3F4F4"/>
+      <path fill="#2C2C2C" fill-rule="evenodd" transform="translate(123 181.5) scale(.866)" d="M 886.5 423.5 A 437.5 328 0 0 1 11.5 423.5 C 11.5 208 232.9 140.6 336 135 C 247.4 90.8 145.1 168.2 136 171 C 227.8 44.4 354.3 17.9 406 105 C 428.2 79 375.4 38.8 374.5 37.5 C 408.1 2.5 489.9 2.5 523.5 37.5 C 522.6 38.8 469.8 79 492 105 C 543.7 17.9 670.2 44.4 762 171 C 752.9 168.2 650.6 90.8 562 135 C 665.1 140.6 886.5 208 886.5 423.5 Z M 361 200.5 C 236 219.9 132.1 420.1 156 435 C 174.7 446.7 187.8 364.9 361 200.5 Z M 449 207 C 418.2 244.1 413.7 542 449 542 C 484.3 542 479.8 244.1 449 207 Z M 537 200.5 C 662 219.9 765.9 420.1 742 435 C 723.3 446.7 710.2 364.9 537 200.5 Z"/>
+    </svg>
+    <text x="80" y="38" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#f3f1ea" letter-spacing="-0.5">Black Bao Studio</text>
+  </g>
+  <g transform="translate(80, 260)">
+    <text x="0" y="0" font-family="Inter, system-ui, sans-serif" font-size="104" font-weight="900" fill="#f3f1ea" letter-spacing="-4">Websites,</text>
+    <text x="0" y="110" font-family="Inter, system-ui, sans-serif" font-size="104" font-weight="900" fill="#f3f1ea" letter-spacing="-4">engineered like</text>
+    <text x="0" y="220" font-family="Georgia, serif" font-size="104" font-weight="400" font-style="italic" fill="#ffcf4a" letter-spacing="-3">infrastructure.</text>
+  </g>
+  <g transform="translate(80, 560)">
+    <text x="0" y="0" font-family="JetBrains Mono, ui-monospace, monospace" font-size="20" fill="#a8a49a" letter-spacing="2">CURATED · PERFORMANT · ZERO FRAMEWORK BLOAT</text>
+  </g>
+</svg>

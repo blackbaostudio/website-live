@@ -1,0 +1,62 @@
+import{c as W,d as ee}from"./shell-index.js";var Y=`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o;
+uniform sampler2D u_scene; uniform vec2 u_aspect, u_center; uniform float u_time, u_p, u_radius, u_lens, u_reach, u_orbit, u_wave, u_aberr;
+vec2 spin(vec2 v, float a) { float c = cos(a), s = sin(a); return mat2(c, -s, s, c) * v; }
+float lobes(float a) { return sin(a * 3.0 + u_time * 0.7) * 0.6 + sin(a * 5.0 - u_time * 0.45) * 0.4; }
+vec4 grab(vec2 dir, float rad) {
+  vec2 uv = (dir * rad * u_aspect.x) / u_aspect + u_center;
+  if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0) return vec4(0.0, 0.0, 0.0, 1.0);
+  return texture(u_scene, uv);
+}
+float pull(float t, float e, float fall) { return fall * (e * e) / max(t, 0.001); }
+void main() {
+  vec2 q = (vUv - u_center) * u_aspect;
+  float t = length(q) / u_aspect.x;
+  vec2 dir = length(q) > 0.00001 ? normalize(q) : vec2(1.0, 0.0);
+  float n = lobes(atan(q.y, q.x)) * u_wave * sin(3.14159265 * clamp(u_p, 0.0, 1.0));
+  float r = u_p * u_radius + n;
+  float e = r * u_lens;
+  float fall = 1.0 - smoothstep(r, r + u_reach, t);
+  float draw = pull(t, e, fall);
+  vec2 sdir = spin(dir, draw * u_orbit * min(u_time, 15.0));
+  float split = e * u_aberr;
+  vec4 cr = grab(sdir, t - pull(t, e + split, fall));
+  vec4 cg = grab(sdir, t - draw);
+  vec4 cb = grab(sdir, t - pull(t, e - split, fall));
+  vec4 col = vec4(cr.r, cg.g, cb.b, 1.0);
+  float d = t - r;
+  float aa = max(fwidth(d), 0.0001);
+  float inside = 1.0 - smoothstep(-aa, aa, d);
+  o = mix(col, vec4(0.0, 0.0, 0.0, 1.0), inside);
+}`,A={radius:0.2,lens:1.5,reach:0.16,orbit:0.35,wave:0.025,aberr:0.004,openS:0.85,closeS:0.65,dim:0.6};var j=(t,e,i,r,f)=>{let p=1-t;return p*p*p*e+3*p*p*t*i+3*p*t*t*r+t*t*t*f},re=[[0,0,0.094,0.026,0.124,0.127,0.157,0.29],[0.157,0.29,0.197,0.486,0.254,0.8,0.348,0.884],[0.348,0.884,0.42,0.949,0.374,1,1,1]],z=(t)=>{if(t<=0)return 0;if(t>=1)return 1;for(let[e,i,r,f,p,u,v,L]of re){if(t>v)continue;let _=0,y=1;for(let S=0;S<20;S++){let U=(_+y)/2;if(j(U,e,r,p,v)<t)_=U;else y=U}return j((_+y)/2,i,f,u,L)}return t};var ne=(t)=>new Promise((e,i)=>{let r=new FileReader;r.onload=()=>e(r.result),r.onerror=()=>i(r.error),r.readAsDataURL(t)}),V=new Map,J=(t)=>{let e=V.get(t);if(!e)e=fetch(t).then((i)=>i.ok?i.blob():Promise.reject(i.status)).then(ne),V.set(t,e);return e.catch(()=>"")},K=new Map,oe=(t)=>{let e=t.href??`inline:${t.ownerNode?.textContent?.length}`,i=K.get(e);if(!i)i=(async()=>{let r="";try{r=[...t.cssRules].map((u)=>u.cssText).join(`
+`)}catch{return""}let f=t.href??location.href,p=[...new Set([...r.matchAll(/url\((['"]?)([^'")]+)\1\)/g)].map((u)=>u[2]))].filter((u)=>!u.startsWith("data:"));for(let u of p){let v=await J(new URL(u,f).href);if(v)r=r.split(u).join(v)}return r.replace(/(^|[\s,>+~}(])html(?=[\s.:#[,>{]|$)/g,"$1.sh-snap-html").replace(/(^|[\s,>+~}(])body(?=[\s.:#[,>{]|$)/g,"$1.sh-snap-body")})(),K.set(e,i);return i};var ie=()=>[...document.body.children].filter((t)=>!t.hasAttribute("data-shell")&&t.tagName!=="SCRIPT"&&t.tagName!=="NOSCRIPT"),se=()=>{for(let t of[document.body,document.documentElement]){let e=getComputedStyle(t).backgroundColor;if(e&&e!=="transparent"&&!/rgba\(.*,\s*0\)$/.test(e))return e}return"#ffffff"},Q=async(t,e,i)=>{let r=new Image(e,i);return r.src=`data:image/svg+xml;charset=utf-8,${encodeURIComponent(t)}`,await r.decode(),r};async function Z(){let t=innerWidth,e=innerHeight,i=Math.max(document.documentElement.scrollHeight,e),r=Math.max(0,Math.min(scrollY-e*1.5,i-e*4)),f=Math.min(i-r,e*4),p=ie(),u=[...document.styleSheets].filter((l)=>!l.disabled&&(!l.media.mediaText||matchMedia(l.media.mediaText).matches)&&!(l.ownerNode instanceof Element&&l.ownerNode.hasAttribute("data-shell-css"))),v=Promise.all(u.map(oe)),L=[],_=new Set,y=document.createElement("div"),S=[];for(let l of p){let x=l.cloneNode(!0),C=[l,...l.querySelectorAll("*")],R=[x,...x.querySelectorAll("*")];C.forEach((o,E)=>{let b=R[E],w=getComputedStyle(o);if(w.position==="fixed")_.add(b);if(o instanceof HTMLCanvasElement){if(o.width&&o.height&&w.visibility!=="hidden"&&w.display!=="none")L.push(o);let m=o.getBoundingClientRect(),g=document.createElement("div");if(g.className=o.className,g.setAttribute("style",`${o.getAttribute("style")??""};width:${m.width}px;height:${m.height}px;background:transparent;opacity:0`),w.position==="fixed")_.add(g);b.replaceWith(g),R[E]=g;return}if(o instanceof HTMLVideoElement){let m=document.createElement("img");m.className=o.className,m.setAttribute("style",o.getAttribute("style")??"");try{if(o.videoWidth){let g=Object.assign(document.createElement("canvas"),{width:o.videoWidth,height:o.videoHeight});g.getContext("2d").drawImage(o,0,0),m.src=g.toDataURL("image/webp",0.85)}else m.src=o.poster||"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}catch{m.src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="}b.replaceWith(m),R[E]=m;return}if(b instanceof HTMLImageElement){let m=o.getBoundingClientRect(),g=m.bottom>r-scrollY&&m.top<r+f-scrollY&&m.width>0;if(b.removeAttribute("srcset"),b.removeAttribute("loading"),!g)b.src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";else S.push(J(o.currentSrc||o.src).then((F)=>void(b.src=F||"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")))}if(b instanceof HTMLInputElement)b.setAttribute("value",o.value)});for(let o of x.querySelectorAll("script, noscript, iframe"))o.remove();y.appendChild(x)}await Promise.all(S);let U=(await v).join(`
+`),B=document.documentElement,H=document.body,I=getComputedStyle(B).fontSize,O=`<style><![CDATA[${U.split("]]>").join("]]]]><![CDATA[>")}]]></style>`,T=(l,x,C)=>{let R=l==="scroll"?"[data-sh-fixed]{visibility:hidden!important}":".sh-snap-body{visibility:hidden!important}[data-sh-fixed]{visibility:visible!important}";for(let E of _)E.setAttribute("data-sh-fixed","");let o=new XMLSerializer().serializeToString(y).replace(/^<div[^>]*>|<\/div>$/g,"");return`<svg xmlns="http://www.w3.org/2000/svg" width="${t}" height="${C}" style="font-size:${I}"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml" class="sh-snap-html ${B.className}" style="width:${t}px;height:${C}px;overflow:hidden;position:relative;background:transparent;font-size:${I}">${O}<style>${R}</style><div class="sh-snap-body ${H.className}" style="position:absolute;left:${-scrollX}px;top:${-x}px;width:${t}px;min-height:${i}px;margin:0;background:transparent">${o}</div></div></foreignObject></svg>`};try{let l={img:await Q(T("scroll",r,f),t,f),top:r,height:f},x=_.size?{img:await Q(T("fixed",scrollY,e),t,e),top:0,height:e}:null;return{scroll:l,fixed:x,bg:se(),canvases:L}}catch{return null}}var G=`#version 300 es
+in vec2 a; out vec2 vUv;
+void main() { vUv = a * 0.5 + 0.5; gl_Position = vec4(a, 0.0, 1.0); }`,ae=`#version 300 es
+in vec2 a; out vec2 vUv; uniform vec4 u_rect; uniform vec2 u_view;
+void main() {
+  vUv = a * 0.5 + 0.5;
+  vec2 px = vec2(u_rect.x + vUv.x * u_rect.z, u_rect.y + (1.0 - vUv.y) * u_rect.w);
+  gl_Position = vec4(px.x / u_view.x * 2.0 - 1.0, 1.0 - px.y / u_view.y * 2.0, 0.0, 1.0);
+}`,ce=`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o; uniform sampler2D u_tex;
+void main() { o = texture(u_tex, vUv); }`,ue=`#version 300 es
+precision highp float;
+out vec4 o; uniform vec4 u_c;
+void main() { o = u_c; }`,le=`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o;
+uniform vec2 u_aspect, u_center; uniform float u_time, u_p;
+float lobes(float a) { return sin(a * 3.0 + u_time * 0.7) * 0.6 + sin(a * 5.0 - u_time * 0.45) * 0.4; }
+void main() {
+  vec2 q = (vUv - u_center) * u_aspect;
+  float t = length(q) / u_aspect.x;
+  float p = clamp(u_p, 0.0, 1.0);
+  float r = p * 0.2 + lobes(atan(q.y, q.x)) * 0.025 * sin(3.14159265 * p);
+  float d = t - r;
+  float aa = max(fwidth(d), 0.0001);
+  float inside = 1.0 - smoothstep(-aa, aa, d);
+  o = vec4(0.0, 0.0, 0.0, max(inside, 0.6 * p));
+}`,me=(t)=>{let e=t.match(/[\d.]+/g)?.map(Number)??[255,255,255];return[e[0]/255,e[1]/255,e[2]/255]};function _e(t){let e=t.getContext("webgl2",{premultipliedAlpha:!0,alpha:!0,antialias:!1});if(!e)return null;let i=(n,c)=>{let d=(h,M)=>{let N=e.createShader(h);return e.shaderSource(N,M),e.compileShader(N),N},s=e.createProgram();if(e.attachShader(s,d(e.VERTEX_SHADER,n)),e.attachShader(s,d(e.FRAGMENT_SHADER,c)),e.bindAttribLocation(s,0,"a"),e.linkProgram(s),!e.getProgramParameter(s,e.LINK_STATUS))return null;let a=new Map;return{p:s,u:(h)=>a.has(h)?a.get(h):(a.set(h,e.getUniformLocation(s,h)),a.get(h))}},r=i(G,Y),f=i(ae,ce),p=i(G,ue),u=i(G,le);if(!r||!f||!p||!u)return null;e.bindBuffer(e.ARRAY_BUFFER,e.createBuffer()),e.bufferData(e.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),e.STATIC_DRAW),e.enableVertexAttribArray(0),e.vertexAttribPointer(0,2,e.FLOAT,!1,0,0);let v=()=>{let n=e.createTexture();e.bindTexture(e.TEXTURE_2D,n);for(let[c,d]of[[e.TEXTURE_MIN_FILTER,e.LINEAR],[e.TEXTURE_MAG_FILTER,e.LINEAR],[e.TEXTURE_WRAP_S,e.CLAMP_TO_EDGE],[e.TEXTURE_WRAP_T,e.CLAMP_TO_EDGE]])e.texParameteri(e.TEXTURE_2D,c,d);return n},L=(n,c)=>{e.bindTexture(e.TEXTURE_2D,n),e.pixelStorei(e.UNPACK_FLIP_Y_WEBGL,!0),e.pixelStorei(e.UNPACK_PREMULTIPLY_ALPHA_WEBGL,!0);try{e.texImage2D(e.TEXTURE_2D,0,e.RGBA,e.RGBA,e.UNSIGNED_BYTE,c)}catch{return!1}return e.getError()===e.NO_ERROR},_=v(),y=e.createFramebuffer(),S=0,U=0,B=(n,c)=>{if(n===S&&c===U)return;S=n,U=c,e.bindTexture(e.TEXTURE_2D,_),e.texImage2D(e.TEXTURE_2D,0,e.RGBA,n,c,0,e.RGBA,e.UNSIGNED_BYTE,null),e.bindFramebuffer(e.FRAMEBUFFER,y),e.framebufferTexture2D(e.FRAMEBUFFER,e.COLOR_ATTACHMENT0,e.TEXTURE_2D,_,0)},H=v(),I=v(),O=new Map,T=null,l=!1,x=async()=>{let n=await Z().catch(()=>null);if(!n||!L(H,n.scroll.img)||n.fixed&&!L(I,n.fixed.img))return!1;return T=n,!0},C=()=>{if(!T||l)return;let{top:n,height:c}=T.scroll,d=document.documentElement.scrollHeight,s=n>0&&scrollY<n+innerHeight*0.5,a=n+c<d&&scrollY+innerHeight>n+c-innerHeight*0.5;if(!s&&!a)return;l=!0,x().finally(()=>l=!1)},R=(n,c,d,s,a,h,M)=>{e.useProgram(f.p),e.activeTexture(e.TEXTURE0),e.bindTexture(e.TEXTURE_2D,n),e.uniform1i(f.u("u_tex"),0),e.uniform4f(f.u("u_rect"),c,d,s,a),e.uniform2f(f.u("u_view"),h,M),e.drawArrays(e.TRIANGLE_STRIP,0,4)},o=(n,c)=>{let d=T,s=innerWidth,a=innerHeight;B(n,c),e.bindFramebuffer(e.FRAMEBUFFER,y),e.viewport(0,0,n,c);let[h,M,N]=me(d.bg);e.clearColor(h,M,N,1),e.clear(e.COLOR_BUFFER_BIT),e.enable(e.BLEND),e.blendFunc(e.ONE,e.ONE_MINUS_SRC_ALPHA);for(let P of d.canvases){if(!P.isConnected)continue;let D=O.get(P);if(!D)O.set(P,D=v());if(!L(D,P))continue;let k=P.getBoundingClientRect();R(D,k.left,k.top,k.width,k.height,s,a)}if(R(H,-scrollX,d.scroll.top-scrollY,s,d.scroll.height,s,a),d.fixed)R(I,0,0,s,a,s,a)},E=0,b=0,w=0,m=0,g=1,F=0,te=performance.now(),X=(n)=>{let c=Math.min(1,(n-m)/g);E=b+(w-b)*z(c);let d=Math.min(2,devicePixelRatio),s=Math.round(innerWidth*d),a=Math.round(innerHeight*d);if(t.width!==s||t.height!==a)t.width=s,t.height=a;let h=15+(n-te)/1000;if(T)o(s,a),e.bindFramebuffer(e.FRAMEBUFFER,null),e.viewport(0,0,s,a),e.disable(e.BLEND),e.useProgram(r.p),e.activeTexture(e.TEXTURE0),e.bindTexture(e.TEXTURE_2D,_),e.uniform1i(r.u("u_scene"),0),e.uniform2f(r.u("u_aspect"),s/a,1),e.uniform2f(r.u("u_center"),0.5,0.5),e.uniform1f(r.u("u_time"),h),e.uniform1f(r.u("u_p"),E),e.uniform1f(r.u("u_radius"),A.radius),e.uniform1f(r.u("u_lens"),A.lens),e.uniform1f(r.u("u_reach"),A.reach),e.uniform1f(r.u("u_orbit"),A.orbit),e.uniform1f(r.u("u_wave"),A.wave),e.uniform1f(r.u("u_aberr"),A.aberr),e.drawArrays(e.TRIANGLE_STRIP,0,4),e.enable(e.BLEND),e.blendFunc(e.ONE,e.ONE_MINUS_SRC_ALPHA),e.useProgram(p.p),e.uniform4f(p.u("u_c"),0,0,0,A.dim*E),e.drawArrays(e.TRIANGLE_STRIP,0,4),C();else e.bindFramebuffer(e.FRAMEBUFFER,null),e.viewport(0,0,s,a),e.clearColor(0,0,0,0),e.clear(e.COLOR_BUFFER_BIT),e.enable(e.BLEND),e.blendFunc(e.ONE,e.ONE_MINUS_SRC_ALPHA),e.useProgram(u.p),e.uniform2f(u.u("u_aspect"),s/a,1),e.uniform2f(u.u("u_center"),0.5,0.5),e.uniform1f(u.u("u_time"),h),e.uniform1f(u.u("u_p"),E),e.drawArrays(e.TRIANGLE_STRIP,0,4);if(c>=1&&w===0){e.clearColor(0,0,0,0),e.clear(e.COLOR_BUFFER_BIT),t.style.visibility="hidden",F=0;return}F=W(X)},q=(n)=>{if(b=E,w=n?1:0,m=performance.now(),g=(n?A.openS:A.closeS)*1000,t.style.visibility="visible",!F)F=W(X)};return{async open(){T=null,await x(),q(!0)},close:()=>q(!1),reset(){ee(F),F=0,E=b=w=0,T=null,e.clearColor(0,0,0,0),e.clear(e.COLOR_BUFFER_BIT),t.style.visibility="hidden"}}}export{_e as createHole};

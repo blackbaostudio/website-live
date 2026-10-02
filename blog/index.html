@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Black Bao Studio · Blog</title>
+  <meta name="description" content="Notes on building websites tight: performance budgets, vanilla TypeScript, and the craft behind them." />
+  <link rel="canonical" href="https://blackbao.studio/blog/" />
+  <meta property="og:site_name" content="Black Bao Studio" />
+  <meta property="og:title" content="Black Bao Studio · Blog" />
+  <meta property="og:description" content="Notes on building websites tight: performance budgets, vanilla TypeScript, and the craft behind them." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blackbao.studio/blog/" />
+  <meta property="og:image" content="https://blackbao.studio/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/InterVariable.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/JetBrainsMono-Variable.woff2" crossorigin />
+  <link rel="stylesheet" href="/blog.css" />
+  <style data-shell-css>/*! tailwindcss v4.2.4 | MIT License | https://tailwindcss.com */
+@layer theme{:root,:host{--sh-color-black:#000;--sh-color-white:#fff}:root{--type-sans:"Inter", ui-sans-serif, system-ui, sans-serif;--type-mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;--type-measure:58ch;--type-label:.75rem;--type-label-leading:1.33;--type-label-tracking:.06em;--type-small:.875rem;--type-small-leading:1.5;--type-small-tracking:-.006em;--type-body:clamp(1.0625rem, 1rem + .25vw, 1.125rem);--type-body-leading:1.5;--type-body-tracking:-.011em;--type-lead:clamp(1.25rem, 1.15rem + .5vw, 1.375rem);--type-lead-leading:1.45;--type-lead-tracking:-.017em;--type-h3:clamp(1.375rem, 1.3rem + .4vw, 1.5rem);--type-h3-leading:1.25;--type-h3-tracking:-.02em;--type-h2:clamp(1.75rem, 1.375rem + 1.6vw, 2.5rem);--type-h2-leading:1.15;--type-h2-tracking:-.022em;--type-h1:clamp(2.25rem, 1.5rem + 3.2vw, 4rem);--type-h1-leading:1.05;--type-h1-tracking:-.022em}}@layer base;@layer components{.sh{--u:clamp(17px, calc(15.143px + .476vw), 22px);--b:15px;font-family:var(--type-sans);-webkit-font-smoothing:antialiased}@media (min-width:768px){.sh{--b:20px}}[data-sh-landing]:focus{outline:none}.sh-menu{z-index:72;text-align:center;pointer-events:none;position:fixed;inset:0}.sh-menu.is-open{pointer-events:auto}.sh-menu__wrap{justify-content:flex-start;align-items:flex-start;width:100%;height:100%;display:flex;position:relative}@media (min-width:768px){.sh-menu[data-invert] .sh-menu__wrap.is-hot{filter:invert();transition:filter .1s ease-in-out}}a.sh-ring .sh-ring__band{top:50%;bottom:auto;left:50%}.sh-menu__anchor{z-index:10;position:relative}.sh-menu__mover{transition:transform .5s cubic-bezier(.4,0,.2,1);position:relative}.sh-ring{width:calc(var(--b) * var(--i));height:calc(var(--b) * var(--i));cursor:pointer;pointer-events:auto;font:inherit;-webkit-tap-highlight-color:transparent;border:0;border-radius:9999px;justify-content:center;align-items:center;padding:0;text-decoration:none;display:flex;position:absolute;top:0;left:0;transform:translate(-50%,-50%)}@media (scripting:enabled){.sh-menu:not(.is-live) .sh-ring{width:0;height:0}}.sh-ring:focus-visible{outline:none}.sh-ring__band{letter-spacing:.025em;white-space:nowrap;transform-origin:50%;pointer-events:none;justify-content:center;align-items:center;height:100%;font-weight:700;display:flex;position:absolute;bottom:0}.sh-ring__label{display:none}.sh-menu.is-open .sh-ring__label{display:block}.sh-ring__label--x svg{stroke:currentColor;stroke-width:1px;width:100%;height:100%;display:block;transform:rotate(45deg)}.sh-phone{z-index:73;pointer-events:none;width:46px;height:0;position:fixed;top:0;right:clamp(14px,4vw,64px)}@media (max-width:767px){.sh-phone{width:34px}}.sh-phone [role=button]:focus-visible{outline-offset:3px;outline:2px solid #ffcf4a}.sh-profile{z-index:70;pointer-events:none;color:#fff;place-items:center;display:grid;position:fixed;inset:0}.sh-profile.is-open{pointer-events:auto}.sh-profile.no-hole:before,html:not(.gl-on) :is([data-overlay=profile],[data-overlay=newsletter]):before{content:"";aspect-ratio:1;opacity:0;pointer-events:none;background:#000;border-radius:50%;width:min(92vmin,720px);transition:opacity .5s ease-out,transform .7s cubic-bezier(0,0,.2,1);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)scale(.86);box-shadow:0 0 0 1.5px #ffd696f2,0 0 6px 2px #ff9e3ce6,0 0 26px 6px #ff7a1c99,0 0 90px 24px #ff621047,inset 0 0 34px #ff7a1c52,0 0 0 200vmax #000000b8}.sh-profile.no-hole.is-in:before,html:not(.gl-on) :is([data-overlay=profile],[data-overlay=newsletter]).is-in:before{opacity:1;transform:translate(-50%,-50%)}.sh-profile__hole{width:100%;height:100%;position:absolute;inset:0}.sh-profile{--wr:max(5px, min(20px, calc(10 * 100vw / 390)))}@media (min-width:650px){.sh-profile{--wr:max(5px, min(20px, calc(10 * 100vw / 1500)))}}.sh-profile__panel{width:max(min(88vw, 460px), calc(42 * var(--wr)));pointer-events:none;font-family:var(--type-sans);font-weight:400;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)}.sh-profile__inner{left:calc(2 * var(--wr));right:calc(2 * var(--wr));text-align:center;color:#fff;flex-direction:column;align-items:center;display:flex;position:absolute;top:50%;transform:translateY(-50%)}.sh-profile__inner:before{content:"";inset:calc(-9 * var(--wr)) calc(-13 * var(--wr));z-index:-1;opacity:0;background:radial-gradient(closest-side,#000c 50%,#00000080 75%,#0000);transition:opacity .7s cubic-bezier(0,0,.2,1);position:absolute}.sh-profile.is-in .sh-profile__inner:before{opacity:1}.sh-profile__text{max-width:max(300px, calc(35 * var(--wr)));font-size:var(--type-body);line-height:var(--type-body-leading);letter-spacing:var(--type-body-tracking);text-shadow:0 0 .75em #000000d9;margin:0}.sh-profile__label{font-size:var(--type-label);line-height:var(--type-label-leading);letter-spacing:var(--type-label-tracking);text-transform:uppercase;color:inherit;text-shadow:0 0 .75em #000000d9;margin:0;font-weight:500;text-decoration:none}a.sh-profile__label{pointer-events:auto;display:block}.sh-profile__label>span{opacity:.6}.sh-profile__gap{margin-top:calc(2.5 * var(--wr))}.sh-profile__links{justify-content:center;align-items:center;gap:calc(.8 * var(--wr)) calc(2 * var(--wr));flex-wrap:wrap;padding:0;list-style:none;display:flex}@media (min-width:650px){.sh-profile__panel{width:max(min(88vw, 560px), calc(60 * var(--wr)))}.sh-profile__text{max-width:max(440px, calc(45 * var(--wr)))}.sh-profile__gap{margin-top:calc(3 * var(--wr))}}.sh-reveal{opacity:0;transition:opacity .7s cubic-bezier(0,0,.2,1),transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s);transform:translateY(.6em)}.sh-profile.is-in .sh-reveal{opacity:1;transform:none}.sh-help{z-index:90;opacity:0;visibility:hidden;background:#0000008c;place-items:center;padding:24px;transition:opacity .2s,visibility .2s;display:grid;position:fixed;inset:0}.sh-help.is-open{opacity:1;visibility:visible}.sh-help__card{color:#f3f1ea;background:#111;border-radius:16px;width:min(420px,100%);padding:24px 26px;transition:transform .25s cubic-bezier(.22,1,.36,1);transform:translateY(8px);box-shadow:0 30px 80px #00000080}.sh-help.is-open .sh-help__card{transform:none}.sh-help__title{font-size:var(--type-label);line-height:var(--type-label-leading);letter-spacing:var(--type-label-tracking);text-transform:uppercase;color:#a8a49a;margin:0 0 14px;font-weight:600}.sh-help__list{font-size:var(--type-small);gap:8px;margin:0;display:grid}.sh-help__list+.sh-help__list:not(:empty){border-top:1px solid #ffffff1a;margin-top:14px;padding-top:14px}.sh-help__list>div{grid-template-columns:64px 1fr;align-items:center;display:grid}.sh-help__list dt,.sh-help__list dd{margin:0}.sh-key{--base:#d4d4d4;--h:#fff6;color:#313131;background:linear-gradient(135deg, #ffffff1a, transparent 60%, #0000001a), conic-gradient(from 135deg, transparent, var(--h)), conic-gradient(from 225deg, transparent, var(--h)), conic-gradient(from 45deg, transparent, var(--h)), conic-gradient(from -45deg, var(--h), transparent), var(--base);border-radius:10px;place-items:center;padding:4px;transition:transform .12s,box-shadow .12s;display:inline-grid;box-shadow:0 0 1.6px #0000001a,0 0 16px #0000001a}.sh-key:after{content:var(--value);min-width:14px;font:600 var(--type-small) / 1 var(--type-sans);text-align:center;text-shadow:1px 1px #fff;background:radial-gradient(50% 50%,#00000014,#0000),#f7f7f7;border-radius:7px;padding:7px 10px;box-shadow:-1px -1px #0000000a,1px 1px #fff}.sh-key--sm{border-radius:8px;padding:3px}.sh-key--sm:after{min-width:10px;font-size:var(--type-label);border-radius:6px;padding:5px 7px}:root{--sh-keymap-clear:60px}.sh-keymap{left:calc(12px + env(safe-area-inset-left));bottom:calc(12px + env(safe-area-inset-bottom));z-index:74;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;background:0 0;border:0;align-items:center;gap:9px;padding:0;display:flex;position:fixed}.sh-keymap.is-dragging{cursor:grabbing}.sh-keymap__label{font:600 var(--type-label) / 1 var(--type-sans);letter-spacing:var(--type-label-tracking);text-transform:uppercase;color:#fff;mix-blend-mode:difference}.sh-keymap:hover .sh-key,.sh-keymap[aria-expanded=true] .sh-key{transform:translateY(1px);box-shadow:0 0 1px #00000026,0 0 6px #0000001f}@media (max-width:767px),(pointer:coarse){:root{--sh-keymap-clear:0px}.sh-keymap{display:none}}.sh-keymap:focus-visible{outline-offset:4px;border-radius:12px;outline:2px solid #ffcf4a}@media (prefers-reduced-motion:reduce){.sh-menu__mover,.sh-reveal,.sh-help,.sh-help__card{transition:none}}}@layer utilities{.sh\:sr-only{clip-path:inset(50%);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.sh\:bg-black{background-color:var(--sh-color-black)}.sh\:bg-white{background-color:var(--sh-color-white)}.sh\:text-black{color:var(--sh-color-black)}.sh\:text-white{color:var(--sh-color-white)}}@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/InterVariable.woff2)format("woff2-variations")}</style>
+  <script type="module" src="/shell.js"></script>
+  <script type="module" src="/blog.js"></script>
+  <noscript>
+    <style>
+      /* Inside @layer base on purpose: Tailwind's preflight hides [hidden] with an !important in that layer, and an unlayered !important loses to it. */
+      @layer base {
+        [data-inner][hidden] { display: grid !important; }
+        [data-toggle], [data-art] { display: none !important; }
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a href="#blog-title" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded-xs focus:bg-accent focus:px-3 focus:py-1 focus:text-canvas">Skip to content</a>
+  <main class="mx-auto w-full max-w-[1728px] min-h-[100lvh]">
+  <div class="grid w-full grid-cols-8 px-3 t:grid-cols-16 d:grid-cols-24">
+    <section class="grid grid-cols-subgrid col-span-full self-start gap-y-3 pt-[84px] t:gap-y-6 t:pt-[112px] d:gap-y-14" aria-labelledby="blog-title">
+      <div class="col-span-full">
+        <h1 id="blog-title" class="bb-t-title flex whitespace-nowrap">Blog<sup class="bb-t-sup ml-2">(14)</sup></h1>
+      </div>
+      <div class="grid grid-cols-subgrid col-span-full self-start d:sticky d:top-[60px] d:col-[1/6]">
+        <div class="grid grid-cols-subgrid col-span-full self-start d:col-[1/5] d:gap-y-4">
+          <div class="grid grid-cols-subgrid col-span-full self-start border-b-[0.5px] border-ink pb-1.5 "><div class="bb-t-caps flex gap-1 col-span-full"><span aria-hidden="true">/</span>Filters</div></div>
+          <div class="grid grid-cols-subgrid col-span-full items-center border-b border-dotted border-ink/27 d:flex d:flex-col d:items-stretch d:border-0">
+  <button type="button" class="group/dir col-[1/3] flex items-center gap-2 border-r border-dotted border-ink/27 py-3 pr-3 text-ink d:col-auto d:border-0 d:p-0" aria-expanded="true" aria-controls="blog-topics" data-directory-toggle>
+    <svg class="mt-1.5 hidden h-1.5 w-2.5 shrink-0 transition-transform duration-300 ease-out-expo group-aria-[expanded=false]/dir:-rotate-90 d:block" viewBox="0 0 10 7" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M9.837.885a.556.556 0 0 0-.786 0L5 4.937.948.885a.556.556 0 1 0-.785.786l4.444 4.444a.556.556 0 0 0 .786 0l4.444-4.444a.556.556 0 0 0 0-.786Z"/></svg><svg class="block size-[18px]" viewBox="0 0 12 10" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 0h6v1H1V0Zm0 6V1H0v8h1v1h10V9h1V3h-1V2H8V1H7v1h1v1h3v1H3v1H2v1H1Zm0 1v2h10V5H3v1H2v1H1Z"/></svg><span class="bb-t-xs">Topic</span>
+  </button>
+  <div class="col-[3/-1] flex h-full items-center d:block">
+    <div id="blog-topics" class="min-w-0 flex-1 overflow-x-auto d:overflow-visible" data-collapse>
+      <div class="flex flex-col d:mt-2.5 d:ml-[7px] d:border-l d:border-dotted d:border-ink/27">
+        <ul class="m-0 flex list-none flex-row gap-3 overflow-x-auto overflow-y-hidden px-3 [mask-image:linear-gradient(90deg,#0000_0,#000_12px_90%,#0000)] [scrollbar-width:none] overscroll-x-contain [&::-webkit-scrollbar]:hidden d:flex-col d:gap-2 d:overflow-visible d:pr-0 d:pl-3 d:[mask-image:none]">
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="ACCESSIBILITY">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Accessibility <span class="ml-0.5">(2)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="BUN">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Bun <span class="ml-0.5">(2)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="DESIGN">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Design <span class="ml-0.5">(5)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="GO">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Go <span class="ml-0.5">(1)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="INFRASTRUCTURE">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Infrastructure <span class="ml-0.5">(3)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="MACOS">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">macOS <span class="ml-0.5">(1)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="PERFORMANCE">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Performance <span class="ml-0.5">(6)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="RUST">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Rust <span class="ml-0.5">(1)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="SECURITY">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Security <span class="ml-0.5">(1)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="STUDIO">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Studio <span class="ml-0.5">(3)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="TAILWIND CSS">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Tailwind CSS <span class="ml-0.5">(1)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="TOOLING">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Tooling <span class="ml-0.5">(3)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="VANILLA TYPESCRIPT">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">Vanilla TypeScript <span class="ml-0.5">(5)</span></span>
+  </button>
+</li>
+          <li class="flex h-full shrink-0 items-center whitespace-nowrap py-1 leading-none d:block d:h-auto d:py-0">
+  <button type="button" class="bb-t-xs group/opt flex cursor-pointer self-start text-left capitalize text-ink-muted hover:text-ink aria-pressed:text-ink" aria-pressed="false" data-filter-option data-topic="WEBGL">
+    <svg class="mr-2 hidden h-3.5 w-[15px] opacity-40 [image-rendering:pixelated] group-aria-pressed/opt:opacity-100 d:block" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true"><path class="group-aria-pressed/opt:hidden" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1Z"/><path class="hidden group-aria-pressed/opt:inline" fill-rule="evenodd" d="M1 1H0v7h1v1h8V8h1V1H9V0H1v1Zm0 0h8v7H1V1ZM7 2h1v1H7V2ZM6 4V3h1v1H6ZM5 5V4h1v1H5ZM4 6V5h1v1H4Zm-1 0h1v1H3V6Zm0 0H2V5h1v1Z"/></svg>
+    <span class="group-aria-pressed/opt:bg-accent group-aria-pressed/opt:text-canvas">WebGL <span class="ml-0.5">(1)</span></span>
+  </button>
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="group/art relative col-span-full mt-6 hidden cursor-grab select-none border border-ink bg-canvas-soft active:cursor-grabbing d:block" data-art>
+  <div class="flex h-5 items-center justify-between px-1 text-ink-muted">
+    <button type="button" class="block size-3 cursor-pointer p-0 fine:hover:text-ink" aria-label="Shuffle the figure" data-art-shuffle><svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M0 1h1v1H0zM1 0h1v1H1zM2 1h1v1H2zM1 2h1v1H1zM9 1h1v1H9zM10 0h1v1h-1zM11 1h1v1h-1zM10 2h1v1h-1zM4.5 5h1v1h-1zM6.5 5h1v1h-1zM5.5 6h1v1h-1zM0 10h1v1H0zM1 9h1v1H1zM2 10h1v1H2zM1 11h1v1H1zM9 10h1v1H9zM10 9h1v1h-1zM11 10h1v1h-1zM10 11h1v1h-1z"/></svg></button>
+    <div class="mx-2.5 h-px flex-1 bg-current opacity-0 group-hover/art:opacity-40" aria-hidden="true"></div>
+    <div class="bb-t-caps whitespace-nowrap leading-none">[ Fig. <span data-art-fig>1</span> ]</div>
+    <div class="mx-2.5 h-px flex-1 bg-current opacity-0 group-hover/art:opacity-40" aria-hidden="true"></div>
+    <span class="block size-3" aria-hidden="true"></span>
+  </div>
+  <div class="relative mx-1 mb-1 aspect-[302/252] overflow-hidden rounded-xs border border-ink">
+    <div class="absolute inset-0 text-ink-muted opacity-20 bg-[radial-gradient(currentColor_0.6px,transparent_0.7px)] bg-[size:8px_8px]" aria-hidden="true"></div>
+    <canvas class="relative block size-full" aria-label="Generative figure: a field of strokes on a turning spiral" role="img"></canvas>
+    <div class="absolute top-[7px] left-2.5 flex items-center gap-1 text-ink-muted opacity-0 group-[.is-dragging]/art:animate-blink" aria-hidden="true"><svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true"><path d="M0 3h1v1H0zM1 2h1v1H1zM2 1h1v1H2zM3 0h1v7H3zM5 3h4v1H5z"/></svg><span class="bb-t-caps">10x</span></div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="grid grid-cols-subgrid col-span-full self-start d:col-[6/25]">
+        <div class="grid grid-cols-subgrid col-span-full self-start border-b-[0.5px] border-ink pb-1.5 hidden d:grid"><div class="bb-t-caps flex gap-1 col-[1/3]"><span aria-hidden="true">/</span>Date</div><div class="bb-t-caps flex gap-1 col-[3/14]"><span aria-hidden="true">/</span>Name</div></div>
+        <ul class="grid grid-cols-subgrid col-span-full m-0 list-none p-0">
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="WEBGL|PERFORMANCE|VANILLA TYPESCRIPT" data-seed="0">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/porting-a-webgl-portfolio-without-three-or-gsap/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-09-16">2026.9.16</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Porting a WebGL portfolio without Three.js or GSAP<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-0-details" aria-label="Expand details for Porting a WebGL portfolio without Three.js or GSAP" data-toggle data-title="Porting a WebGL portfolio without Three.js or GSAP"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-0-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The Work section reproduces a reference that ships a megabyte of Three.js and GSAP. Ours runs on a hand-rolled WebGL2 renderer, a 140-line tween engine and a router that swaps the main element, in under 20 kB gzipped.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">WebGL</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Performance</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Vanilla TypeScript</span></li></ul>
+  <a href="/blog/porting-a-webgl-portfolio-without-three-or-gsap/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="PERFORMANCE|TOOLING|BUN" data-seed="1">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/every-byte-earns-its-download/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-09-02">2026.9.02</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Every byte earns its download<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-1-details" aria-label="Expand details for Every byte earns its download" data-toggle data-title="Every byte earns its download"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-1-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">We used to cap our JavaScript at 15 kB and fail the build over it. A cap is the wrong question for a site worth looking at. Now the build keeps a ledger of what every file weighs, and nothing gets heavier without someone deciding it should.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Performance</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Tooling</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Bun</span></li></ul>
+  <a href="/blog/every-byte-earns-its-download/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="TAILWIND CSS|PERFORMANCE|DESIGN" data-seed="2">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/tailwind-at-build-time-zero-at-runtime/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-08-19">2026.8.19</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Tailwind CSS at build time, zero at runtime<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-2-details" aria-label="Expand details for Tailwind CSS at build time, zero at runtime" data-toggle data-title="Tailwind CSS at build time, zero at runtime"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-2-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">Utilities are scanned from the templates and compiled into one stylesheet per section. The browser never sees a class it does not use, and it never runs a line of styling JavaScript.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Black Bao Studio</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Tailwind CSS</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Performance</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Design</span></li></ul>
+  <a href="/blog/tailwind-at-build-time-zero-at-runtime/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="PERFORMANCE|DESIGN" data-seed="3">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/subsetting-a-variable-font-by-unicode-range/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-08-05">2026.8.05</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Subsetting a variable font by unicode range<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-3-details" aria-label="Expand details for Subsetting a variable font by unicode range" data-toggle data-title="Subsetting a variable font by unicode range"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-3-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">Two WOFF2 files cover Latin and Latin Extended, each declared with its own unicode-range, so a page that only uses ASCII downloads one of them. How the split is chosen and what it does to the first paint.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Performance</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Design</span></li></ul>
+  <a href="/blog/subsetting-a-variable-font-by-unicode-range/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="VANILLA TYPESCRIPT|PERFORMANCE|INFRASTRUCTURE" data-seed="4">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/static-html-for-every-route-then-a-router-on-top/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-07-22">2026.7.22</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Static HTML for every route, then a router on top<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-4-details" aria-label="Expand details for Static HTML for every route, then a router on top" data-toggle data-title="Static HTML for every route, then a router on top"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-4-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The build writes one HTML file per route from the same templates the client router renders. Deep links work without JavaScript, and an in-app navigation produces the exact DOM a cold load would.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Vanilla TypeScript</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Performance</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Infrastructure</span></li></ul>
+  <a href="/blog/static-html-for-every-route-then-a-router-on-top/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="BUN|TOOLING" data-seed="5">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/one-bun-file-as-dev-server-bundler-and-tailwind-watcher/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-07-08">2026.7.08</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">One Bun file as dev server, bundler and Tailwind CSS watcher<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-5-details" aria-label="Expand details for One Bun file as dev server, bundler and Tailwind CSS watcher" data-toggle data-title="One Bun file as dev server, bundler and Tailwind CSS watcher"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-5-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The development server is a single TypeScript file: it serves the repo, bundles entry points on request, spawns a Tailwind CSS watcher per stylesheet and renders the generated routes. No framework, no config directory.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Black Bao Studio</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Bun</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Tooling</span></li></ul>
+  <a href="/blog/one-bun-file-as-dev-server-bundler-and-tailwind-watcher/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="SECURITY|INFRASTRUCTURE" data-seed="6">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/a-content-security-policy-for-a-site-with-no-third-parties/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-06-24">2026.6.24</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">A Content-Security-Policy for a site with no third parties<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-6-details" aria-label="Expand details for A Content-Security-Policy for a site with no third parties" data-toggle data-title="A Content-Security-Policy for a site with no third parties"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-6-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">With no CDN fonts, no analytics and no embeds, the policy collapses to default-src self. What that rules out, the one inline exception for noscript styles, and why the rest of the headers file is short.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Security</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Infrastructure</span></li></ul>
+  <a href="/blog/a-content-security-policy-for-a-site-with-no-third-parties/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="VANILLA TYPESCRIPT|DESIGN" data-seed="7">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/typing-terminals-in-the-hero-without-a-framework/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-06-10">2026.6.10</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Typing terminals in the hero without a framework<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-7-details" aria-label="Expand details for Typing terminals in the hero without a framework" data-toggle data-title="Typing terminals in the hero without a framework"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-7-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The landing page hero types a command, streams output a line at a time and pauses on a choice. The scenarios live in template elements in the markup, and a run token keeps fast tab clicks from interleaving.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Vanilla TypeScript</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Design</span></li></ul>
+  <a href="/blog/typing-terminals-in-the-hero-without-a-framework/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="MACOS|STUDIO" data-seed="8">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/native-apps-not-web-views/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-05-27">2026.5.27</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Native apps, not web views<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-8-details" aria-label="Expand details for Native apps, not web views" data-toggle data-title="Native apps, not web views"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-8-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The utilities we publish are native. No bundled browser, no telemetry, no update daemon. Why a small studio takes the slower road and what it gets back.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Black Bao Studio</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">macOS</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Studio</span></li></ul>
+  <a href="/blog/native-apps-not-web-views/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="ACCESSIBILITY|DESIGN|VANILLA TYPESCRIPT" data-seed="9">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/reduced-motion-is-a-feature-not-a-fallback/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-05-13">2026.5.13</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Reduced motion is a feature, not a fallback<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-9-details" aria-label="Expand details for Reduced motion is a feature, not a fallback" data-toggle data-title="Reduced motion is a feature, not a fallback"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-9-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">Every animated component on the site has a reduced-motion path that is designed, not just disabled. Typing becomes a print, reveals become visible, waveforms stand still, and the page loses nothing.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Accessibility</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Design</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Vanilla TypeScript</span></li></ul>
+  <a href="/blog/reduced-motion-is-a-feature-not-a-fallback/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="VANILLA TYPESCRIPT|DESIGN" data-seed="10">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/reading-a-live-waveform-with-the-web-audio-analyser/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-04-29">2026.4.29</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Reading a live waveform with the Web Audio analyser<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-10-details" aria-label="Expand details for Reading a live waveform with the Web Audio analyser" data-toggle data-title="Reading a live waveform with the Web Audio analyser"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-10-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The demo player draws its bars from the narration&#39;s real frequency data through an AnalyserNode. When the file cannot play, the same bars fall back to a CSS keyframe so the component never looks broken.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Vanilla TypeScript</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Design</span></li></ul>
+  <a href="/blog/reading-a-live-waveform-with-the-web-audio-analyser/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="GO|RUST|INFRASTRUCTURE|STUDIO" data-seed="11">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/where-go-and-rust-earn-their-place-in-a-web-studio/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-04-15">2026.4.15</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Where Go and Rust earn their place in a web studio<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-11-details" aria-label="Expand details for Where Go and Rust earn their place in a web studio" data-toggle data-title="Where Go and Rust earn their place in a web studio"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-11-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">The front end is vanilla TypeScript by design. Behind it, Go handles services and tooling that need to run for years, and Rust takes the pieces where a runtime would cost too much. A short field guide to the split.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Black Bao Studio</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Go</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Rust</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Infrastructure</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Studio</span></li></ul>
+  <a href="/blog/where-go-and-rust-earn-their-place-in-a-web-studio/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="PERFORMANCE|TOOLING|ACCESSIBILITY" data-seed="12">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/lighthouse-100-is-the-aim/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-03-18">2026.3.18</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Lighthouse 100 is the aim<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-12-details" aria-label="Expand details for Lighthouse 100 is the aim" data-toggle data-title="Lighthouse 100 is the aim"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-12-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">Performance, accessibility, best practices and SEO are what we aim at for every page, not a report to admire. How the checks run, which numbers we treat as real, and why an estimate never counts as a measurement.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Noel Ruault</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Performance</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Tooling</span></li><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Accessibility</span></li></ul>
+  <a href="/blog/lighthouse-100-is-the-aim/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+          <li class="grid grid-cols-subgrid col-span-full border-b-[0.5px] border-ink text-ink" data-post data-topics="STUDIO" data-seed="13">
+  <div class="group/row grid grid-cols-subgrid col-span-full cursor-pointer items-center gap-x-1 gap-y-[7px] fine:hover:bg-accent fine:hover:text-canvas">
+    <a href="/blog/hello-from-alicante/" class="group/link grid grid-cols-subgrid col-[1/8] gap-x-1 gap-y-[7px] py-2.5 t:col-[1/15] d:col-[1/18]">
+      <div class="col-[1/3] flex items-center gap-2 select-none">
+        <span class="mt-px block size-2 min-h-2 min-w-2 bg-ink fine:group-hover/row:bg-canvas" aria-hidden="true"></span>
+        <span class="bb-t-caps"><time datetime="2026-03-04">2026.3.04</time></span>
+      </div>
+      <div class="text-lead col-[1/-2] -mt-1 overflow-hidden leading-[1.2] text-pretty select-none t:col-[3/15] t:overflow-hidden t:text-ellipsis t:whitespace-nowrap d:col-[3/18]">Hello from Alicante<span class="opacity-0 transition-opacity duration-150 group-hover/link:opacity-100"><span class="ml-[7px] inline-block w-[calc(.540541vw+5.89189px)] align-baseline t:-mt-[3px] t:w-[calc(.206612vw+8.42975px)] w:w-3"><svg viewBox="0 0 6 6" fill="currentColor" aria-hidden="true"><rect y="5" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" width="1" height="6"/><rect width="6" height="1"/></svg></span></span></div>
+    </a>
+    <button type="button" class="group/tg col-[-2/-1] m-0 grid h-full cursor-pointer items-center justify-end p-0 t:col-[-3/-1]" aria-expanded="false" aria-controls="post-13-details" aria-label="Expand details for Hello from Alicante" data-toggle data-title="Hello from Alicante"><svg class="block" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M0 5h10" stroke="currentColor"/><path class="origin-center transition-transform duration-600 ease-out-expo group-aria-expanded/tg:scale-0" d="M5 0v10" stroke="currentColor"/></svg></button>
+  </div>
+  <div id="post-13-details" class="grid grid-cols-subgrid col-span-full items-baseline overflow-hidden" hidden aria-hidden="true" data-inner>
+    <div class="col-span-full row-start-1 pb-5"></div>
+  <span class="bb-t-caps col-[1/3]">Summary:</span>
+  <p class="text-small col-[3/11]">Black Bao Studio is a two-desk studio on the Spanish coast that builds websites the way infrastructure is built: measured, budgeted and boring where boring is a virtue. This is the first post.</p>
+  <span class="bb-t-caps row-start-3 t:col-[13/15] t:row-start-2">Author:</span>
+  <div class="col-[3/10] row-start-3 flex gap-2 pt-8 t:col-[15/-1] t:row-start-2 t:pt-0"><span class="text-small">Black Bao Studio</span></div>
+  <div class="bb-t-caps col-[1/3] self-center">Topics:</div>
+  <ul class="col-[3/10] m-0 flex list-none flex-wrap gap-0.5 self-center py-8"><li><span class="bb-t-caps inline-block whitespace-nowrap rounded-sm border border-dotted border-ink/27 px-[5px] pt-0.5 pb-[2.5px] leading-none">Studio</span></li></ul>
+  <a href="/blog/hello-from-alicante/" class="block w-full cursor-pointer rounded-full border border-ink px-3 pt-2.5 pb-3 text-center text-small font-medium leading-none tracking-[-0.42px] text-ink fine:hover:bg-ink fine:hover:text-canvas col-[1/18] mb-4">Read</a>
+  </div>
+</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
+  <div class="sh" data-shell>
+  <div class="sh-menu" id="sh-menu" data-menu>
+  <div class="sh-menu__wrap" data-menu-wrap>
+    <div class="sh-menu__anchor">
+      <nav class="sh-menu__mover" aria-label="Site" data-menu-mover>
+        <a href="https://github.com/blackbaostudio" class="sh-ring sh:bg-white sh:text-black" style="--i:6" data-ring="6" tabindex="-1" aria-label="GITHUB (new tab)" data-hotkey="G" target="_blank" rel="noopener"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>GITHUB</span></span></a>
+        <a href="/blog/" class="sh-ring sh:bg-black sh:text-white" style="--i:5" data-ring="5" tabindex="-1" aria-label="BLOG" data-hotkey="B"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>BLOG</span></span></a>
+        <a href="/work/" class="sh-ring sh:bg-white sh:text-black" style="--i:4" data-ring="4" tabindex="-1" aria-label="WORK" data-hotkey="W"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>WORK</span></span></a>
+        <a href="/apps/" class="sh-ring sh:bg-black sh:text-white" style="--i:3" data-ring="3" tabindex="-1" aria-label="APPS" data-hotkey="A"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>APPS</span></span></a>
+        <a href="/" class="sh-ring sh:bg-white sh:text-black" style="--i:2" data-ring="2" tabindex="-1" aria-label="HOME" data-hotkey="H"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>HOME</span></span></a>
+        <button type="button" class="sh-ring sh:bg-black sh:text-white" style="--i:1" data-ring="1" aria-label="Menu" aria-expanded="false" aria-controls="sh-menu" data-menu-toggle><span class="sh-ring__band" data-ring-band><span class="sh-ring__label sh-ring__label--x" data-ring-label><svg viewBox="0 0 13 13" aria-hidden="true"><line x1="0.375" y1="6.5" x2="12.625" y2="6.5"/><line x1="6.5" y1="0.375" x2="6.5" y2="12.625"/></svg></span></span></button>
+      </nav>
+    </div>
+  </div>
+</div>
+  <div class="sh-phone" data-phone></div>
+  <div class="sh-profile" id="sh-profile" inert data-profile>
+  <canvas class="sh-profile__hole" data-profile-hole></canvas>
+  <div class="sh-profile__panel" role="dialog" aria-modal="true" aria-label="Black Bao Studio">
+    <div class="sh-profile__inner">
+      <p class="sh-reveal sh-profile__text">Black Bao Studio, a small studio in Alicante crafting meticulously engineered websites. SRE-grade reliability, on-point UI/UX, zero framework bloat. We aim to make every byte you download worth it.</p>
+      <p class="sh-reveal sh-profile__label sh-profile__gap" style="--d:0.09s"><span>Aiming for Lighthouse 100 · every byte earns its download · no frameworks</span></p>
+      <ul class="sh-profile__links sh-profile__gap">
+        <li><a href="https://github.com/blackbaostudio" target="_blank" rel="noopener" class="sh-reveal sh-profile__label" style="--d:0.18s">GitHub</a></li>
+        <li><a href="mailto:contact@blackbao.studio" class="sh-reveal sh-profile__label" style="--d:0.27s" data-profile-last>Email</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <button type="button" class="sh-keymap" aria-controls="sh-help" aria-expanded="false" data-keymap><key class="sh-key" style="--value:'?'"><span class="sh:sr-only">?</span></key><span class="sh-keymap__label">keymap</span></button>
+  <div class="sh-help" id="sh-help" role="dialog" aria-modal="true" aria-labelledby="sh-help-title" inert data-help>
+  <div class="sh-help__card">
+    <h2 class="sh-help__title" id="sh-help-title">Keymap</h2>
+    <dl class="sh-help__list">
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'H'"><span class="sh:sr-only">H</span></key></dt><dd>Home</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'A'"><span class="sh:sr-only">A</span></key></dt><dd>Apps</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'W'"><span class="sh:sr-only">W</span></key></dt><dd>Work</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'B'"><span class="sh:sr-only">B</span></key></dt><dd>Blog</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'G'"><span class="sh:sr-only">G</span></key></dt><dd>GitHub (new tab)</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'M'"><span class="sh:sr-only">M</span></key></dt><dd>Open or close the menu</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'P'"><span class="sh:sr-only">P</span></key></dt><dd>Pick up the phone: who we are</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'?'"><span class="sh:sr-only">?</span></key></dt><dd>This keymap</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'Esc'"><span class="sh:sr-only">Esc</span></key></dt><dd>Close whatever is open</dd></div>
+    </dl>
+    <dl class="sh-help__list" data-help-section></dl>
+  </div>
+</div>
+</div>
+</body>
+</html>

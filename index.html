@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <title>Black Bao Studio · curated websites, engineered tight</title>
+  <meta name="description"
+    content="Black Bao Studio crafts meticulously engineered websites. SRE-grade reliability, on-point UI/UX, zero framework bloat. Vanilla TypeScript. Go. Rust." />
+
+  <link rel="canonical" href="https://blackbao.studio/" />
+
+  <meta property="og:site_name" content="Black Bao Studio" />
+  <meta property="og:title" content="Black Bao Studio" />
+  <meta property="og:description"
+    content="Curated websites, engineered tight. Vanilla TypeScript. Go. Rust. Zero framework bloat." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blackbao.studio/" />
+  <meta property="og:image" content="https://blackbao.studio/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Black Bao Studio" />
+  <meta name="twitter:description" content="Curated websites, engineered tight." />
+  <meta name="twitter:image" content="https://blackbao.studio/og.png" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/InterVariable.woff2" crossorigin />
+  <link rel="preload" as="style" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style data-shell-css>/*! tailwindcss v4.2.4 | MIT License | https://tailwindcss.com */
+@layer theme{:root,:host{--sh-color-black:#000;--sh-color-white:#fff}:root{--type-sans:"Inter", ui-sans-serif, system-ui, sans-serif;--type-mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;--type-measure:58ch;--type-label:.75rem;--type-label-leading:1.33;--type-label-tracking:.06em;--type-small:.875rem;--type-small-leading:1.5;--type-small-tracking:-.006em;--type-body:clamp(1.0625rem, 1rem + .25vw, 1.125rem);--type-body-leading:1.5;--type-body-tracking:-.011em;--type-lead:clamp(1.25rem, 1.15rem + .5vw, 1.375rem);--type-lead-leading:1.45;--type-lead-tracking:-.017em;--type-h3:clamp(1.375rem, 1.3rem + .4vw, 1.5rem);--type-h3-leading:1.25;--type-h3-tracking:-.02em;--type-h2:clamp(1.75rem, 1.375rem + 1.6vw, 2.5rem);--type-h2-leading:1.15;--type-h2-tracking:-.022em;--type-h1:clamp(2.25rem, 1.5rem + 3.2vw, 4rem);--type-h1-leading:1.05;--type-h1-tracking:-.022em}}@layer base;@layer components{.sh{--u:clamp(17px, calc(15.143px + .476vw), 22px);--b:15px;font-family:var(--type-sans);-webkit-font-smoothing:antialiased}@media (min-width:768px){.sh{--b:20px}}[data-sh-landing]:focus{outline:none}.sh-menu{z-index:72;text-align:center;pointer-events:none;position:fixed;inset:0}.sh-menu.is-open{pointer-events:auto}.sh-menu__wrap{justify-content:flex-start;align-items:flex-start;width:100%;height:100%;display:flex;position:relative}@media (min-width:768px){.sh-menu[data-invert] .sh-menu__wrap.is-hot{filter:invert();transition:filter .1s ease-in-out}}a.sh-ring .sh-ring__band{top:50%;bottom:auto;left:50%}.sh-menu__anchor{z-index:10;position:relative}.sh-menu__mover{transition:transform .5s cubic-bezier(.4,0,.2,1);position:relative}.sh-ring{width:calc(var(--b) * var(--i));height:calc(var(--b) * var(--i));cursor:pointer;pointer-events:auto;font:inherit;-webkit-tap-highlight-color:transparent;border:0;border-radius:9999px;justify-content:center;align-items:center;padding:0;text-decoration:none;display:flex;position:absolute;top:0;left:0;transform:translate(-50%,-50%)}@media (scripting:enabled){.sh-menu:not(.is-live) .sh-ring{width:0;height:0}}.sh-ring:focus-visible{outline:none}.sh-ring__band{letter-spacing:.025em;white-space:nowrap;transform-origin:50%;pointer-events:none;justify-content:center;align-items:center;height:100%;font-weight:700;display:flex;position:absolute;bottom:0}.sh-ring__label{display:none}.sh-menu.is-open .sh-ring__label{display:block}.sh-ring__label--x svg{stroke:currentColor;stroke-width:1px;width:100%;height:100%;display:block;transform:rotate(45deg)}.sh-phone{z-index:73;pointer-events:none;width:46px;height:0;position:fixed;top:0;right:clamp(14px,4vw,64px)}@media (max-width:767px){.sh-phone{width:34px}}.sh-phone [role=button]:focus-visible{outline-offset:3px;outline:2px solid #ffcf4a}.sh-profile{z-index:70;pointer-events:none;color:#fff;place-items:center;display:grid;position:fixed;inset:0}.sh-profile.is-open{pointer-events:auto}.sh-profile.no-hole:before,html:not(.gl-on) :is([data-overlay=profile],[data-overlay=newsletter]):before{content:"";aspect-ratio:1;opacity:0;pointer-events:none;background:#000;border-radius:50%;width:min(92vmin,720px);transition:opacity .5s ease-out,transform .7s cubic-bezier(0,0,.2,1);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)scale(.86);box-shadow:0 0 0 1.5px #ffd696f2,0 0 6px 2px #ff9e3ce6,0 0 26px 6px #ff7a1c99,0 0 90px 24px #ff621047,inset 0 0 34px #ff7a1c52,0 0 0 200vmax #000000b8}.sh-profile.no-hole.is-in:before,html:not(.gl-on) :is([data-overlay=profile],[data-overlay=newsletter]).is-in:before{opacity:1;transform:translate(-50%,-50%)}.sh-profile__hole{width:100%;height:100%;position:absolute;inset:0}.sh-profile{--wr:max(5px, min(20px, calc(10 * 100vw / 390)))}@media (min-width:650px){.sh-profile{--wr:max(5px, min(20px, calc(10 * 100vw / 1500)))}}.sh-profile__panel{width:max(min(88vw, 460px), calc(42 * var(--wr)));pointer-events:none;font-family:var(--type-sans);font-weight:400;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)}.sh-profile__inner{left:calc(2 * var(--wr));right:calc(2 * var(--wr));text-align:center;color:#fff;flex-direction:column;align-items:center;display:flex;position:absolute;top:50%;transform:translateY(-50%)}.sh-profile__inner:before{content:"";inset:calc(-9 * var(--wr)) calc(-13 * var(--wr));z-index:-1;opacity:0;background:radial-gradient(closest-side,#000c 50%,#00000080 75%,#0000);transition:opacity .7s cubic-bezier(0,0,.2,1);position:absolute}.sh-profile.is-in .sh-profile__inner:before{opacity:1}.sh-profile__text{max-width:max(300px, calc(35 * var(--wr)));font-size:var(--type-body);line-height:var(--type-body-leading);letter-spacing:var(--type-body-tracking);text-shadow:0 0 .75em #000000d9;margin:0}.sh-profile__label{font-size:var(--type-label);line-height:var(--type-label-leading);letter-spacing:var(--type-label-tracking);text-transform:uppercase;color:inherit;text-shadow:0 0 .75em #000000d9;margin:0;font-weight:500;text-decoration:none}a.sh-profile__label{pointer-events:auto;display:block}.sh-profile__label>span{opacity:.6}.sh-profile__gap{margin-top:calc(2.5 * var(--wr))}.sh-profile__links{justify-content:center;align-items:center;gap:calc(.8 * var(--wr)) calc(2 * var(--wr));flex-wrap:wrap;padding:0;list-style:none;display:flex}@media (min-width:650px){.sh-profile__panel{width:max(min(88vw, 560px), calc(60 * var(--wr)))}.sh-profile__text{max-width:max(440px, calc(45 * var(--wr)))}.sh-profile__gap{margin-top:calc(3 * var(--wr))}}.sh-reveal{opacity:0;transition:opacity .7s cubic-bezier(0,0,.2,1),transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s);transform:translateY(.6em)}.sh-profile.is-in .sh-reveal{opacity:1;transform:none}.sh-help{z-index:90;opacity:0;visibility:hidden;background:#0000008c;place-items:center;padding:24px;transition:opacity .2s,visibility .2s;display:grid;position:fixed;inset:0}.sh-help.is-open{opacity:1;visibility:visible}.sh-help__card{color:#f3f1ea;background:#111;border-radius:16px;width:min(420px,100%);padding:24px 26px;transition:transform .25s cubic-bezier(.22,1,.36,1);transform:translateY(8px);box-shadow:0 30px 80px #00000080}.sh-help.is-open .sh-help__card{transform:none}.sh-help__title{font-size:var(--type-label);line-height:var(--type-label-leading);letter-spacing:var(--type-label-tracking);text-transform:uppercase;color:#a8a49a;margin:0 0 14px;font-weight:600}.sh-help__list{font-size:var(--type-small);gap:8px;margin:0;display:grid}.sh-help__list+.sh-help__list:not(:empty){border-top:1px solid #ffffff1a;margin-top:14px;padding-top:14px}.sh-help__list>div{grid-template-columns:64px 1fr;align-items:center;display:grid}.sh-help__list dt,.sh-help__list dd{margin:0}.sh-key{--base:#d4d4d4;--h:#fff6;color:#313131;background:linear-gradient(135deg, #ffffff1a, transparent 60%, #0000001a), conic-gradient(from 135deg, transparent, var(--h)), conic-gradient(from 225deg, transparent, var(--h)), conic-gradient(from 45deg, transparent, var(--h)), conic-gradient(from -45deg, var(--h), transparent), var(--base);border-radius:10px;place-items:center;padding:4px;transition:transform .12s,box-shadow .12s;display:inline-grid;box-shadow:0 0 1.6px #0000001a,0 0 16px #0000001a}.sh-key:after{content:var(--value);min-width:14px;font:600 var(--type-small) / 1 var(--type-sans);text-align:center;text-shadow:1px 1px #fff;background:radial-gradient(50% 50%,#00000014,#0000),#f7f7f7;border-radius:7px;padding:7px 10px;box-shadow:-1px -1px #0000000a,1px 1px #fff}.sh-key--sm{border-radius:8px;padding:3px}.sh-key--sm:after{min-width:10px;font-size:var(--type-label);border-radius:6px;padding:5px 7px}:root{--sh-keymap-clear:60px}.sh-keymap{left:calc(12px + env(safe-area-inset-left));bottom:calc(12px + env(safe-area-inset-bottom));z-index:74;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;background:0 0;border:0;align-items:center;gap:9px;padding:0;display:flex;position:fixed}.sh-keymap.is-dragging{cursor:grabbing}.sh-keymap__label{font:600 var(--type-label) / 1 var(--type-sans);letter-spacing:var(--type-label-tracking);text-transform:uppercase;color:#fff;mix-blend-mode:difference}.sh-keymap:hover .sh-key,.sh-keymap[aria-expanded=true] .sh-key{transform:translateY(1px);box-shadow:0 0 1px #00000026,0 0 6px #0000001f}@media (max-width:767px),(pointer:coarse){:root{--sh-keymap-clear:0px}.sh-keymap{display:none}}.sh-keymap:focus-visible{outline-offset:4px;border-radius:12px;outline:2px solid #ffcf4a}@media (prefers-reduced-motion:reduce){.sh-menu__mover,.sh-reveal,.sh-help,.sh-help__card{transition:none}}}@layer utilities{.sh\:sr-only{clip-path:inset(50%);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.sh\:bg-black{background-color:var(--sh-color-black)}.sh\:bg-white{background-color:var(--sh-color-white)}.sh\:text-black{color:var(--sh-color-black)}.sh\:text-white{color:var(--sh-color-white)}}@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/InterVariable.woff2)format("woff2-variations")}</style>
+  <script type="module" src="/shell.js"></script>
+  <script type="module" src="/main.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Black Bao Studio",
+      "url": "https://blackbao.studio",
+      "email": "contact@blackbao.studio",
+      "description": "Curated websites, engineered tight. Vanilla TypeScript. Go. Rust. Zero framework bloat.",
+      "logo": "https://blackbao.studio/icon-512.png",
+      "image": "https://blackbao.studio/og.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alicante",
+        "addressCountry": "ES"
+      },
+      "sameAs": []
+    }
+    </script>
+</head>
+
+<body class="grain">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-accent focus:text-canvas focus:px-3 focus:py-1 focus:rounded">Skip
+    to content</a>
+
+  <main id="main" class="relative z-10">
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden border-b border-line">
+      <!-- The tagline sits beside the shell's corner menu and the title starts just under it (72px reach on desktop, 54px on phones). -->
+      <div class="mx-auto max-w-7xl px-6 md:px-10 pt-4 pb-24 md:pb-32">
+        <!-- Centred between the corner menu and the hanging receiver; on phones the 64px side insets keep it clear of both, so it wraps onto two centred lines. -->
+        <div class="flex flex-wrap items-center justify-center text-center gap-x-3 gap-y-1 px-16 md:px-0 text-label font-mono text-ink-muted mb-10 md:mb-16">
+          <span class="inline-flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+              <span class="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+            </span>
+            accepting · Q1 / Q2 2027
+          </span>
+          <span class="hidden md:inline text-ink-faint">//</span>
+          <span>est. Alicante</span>
+        </div>
+
+        <h1
+          data-display class="font-black text-balance text-display-xl">
+          Websites,
+          <span class="block">engineered</span>
+          <span class="block">
+            like
+            <span class="relative inline-block">
+              <span class="italic font-serif text-accent">infrastructure</span>
+              <svg class="absolute -bottom-1 md:-bottom-3 left-0 w-full" viewBox="0 0 300 12" fill="none"
+                aria-hidden="true">
+                <path d="M2 10 C 60 2, 120 2, 180 8 S 280 4, 298 10" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" class="text-accent" />
+              </svg>
+            </span>.
+          </span>
+        </h1>
+
+        <div class="mt-12 md:mt-16 grid md:grid-cols-12 gap-10">
+          <p class="md:col-span-7 text-lead text-ink-muted text-balance max-w-2xl">
+            We are a two-desk studio that ships curated, performance-obsessed sites. Vanilla TypeScript on the frontend.
+            Go and Rust where it matters. Nothing bloated, nothing imported for show.
+          </p>
+          <div class="md:col-span-5 md:col-start-9 flex flex-col gap-5 text-small font-mono">
+            <div class="flex justify-between border-t border-line pt-4">
+              <span class="text-ink-faint">Performance</span>
+              <span>Lighthouse 100 target</span>
+            </div>
+            <div class="flex justify-between border-t border-line pt-4">
+              <span class="text-ink-faint">LCP target</span>
+              <span>&lt; 1.0s on 4G</span>
+            </div>
+            <div class="flex justify-between border-t border-line pt-4">
+              <span class="text-ink-faint">Page weight</span>
+              <span>every byte earns its download</span>
+            </div>
+            <div class="flex justify-between border-t border-line pt-4">
+              <span class="text-ink-faint">Runtime frameworks</span>
+              <span>none, by design.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div class="border-t border-line overflow-hidden">
+        <div
+          class="flex whitespace-nowrap marquee py-4 text-label font-mono uppercase tracking-[0.2em] text-ink-muted">
+          <span class="flex items-center gap-10 pr-10">
+            <span>curated</span><span class="text-ink-faint">✦</span>
+            <span>deterministic</span><span class="text-ink-faint">✦</span>
+            <span>observable</span><span class="text-ink-faint">✦</span>
+            <span>hand-tuned css</span><span class="text-ink-faint">✦</span>
+            <span>no trackers</span><span class="text-ink-faint">✦</span>
+            <span>edge-deployed</span><span class="text-ink-faint">✦</span>
+            <span>typescript-first</span><span class="text-ink-faint">✦</span>
+            <span>go + rust backends</span><span class="text-ink-faint">✦</span>
+          </span>
+          <span aria-hidden="true" class="flex items-center gap-10 pr-10">
+            <span>curated</span><span class="text-ink-faint">✦</span>
+            <span>deterministic</span><span class="text-ink-faint">✦</span>
+            <span>observable</span><span class="text-ink-faint">✦</span>
+            <span>hand-tuned css</span><span class="text-ink-faint">✦</span>
+            <span>no trackers</span><span class="text-ink-faint">✦</span>
+            <span>edge-deployed</span><span class="text-ink-faint">✦</span>
+            <span>typescript-first</span><span class="text-ink-faint">✦</span>
+            <span>go + rust backends</span><span class="text-ink-faint">✦</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIGRATIONS -->
+    <section id="migrations" class="border-b border-line">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
+        <div class="grid md:grid-cols-12 gap-10 mb-16">
+          <div class="md:col-span-4">
+            <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 01 · What we replace</span>
+          </div>
+          <h2 data-display class="md:col-span-10 text-display font-black text-balance">
+            Heavy stacks <span class="text-ink-muted">go out.</span> <span class="italic font-serif text-accent">Sharp
+              ones</span> come in.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">01</span>
+            <span class="line-through text-ink-muted font-medium">Next.js marketing site</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Bun + vanilla TS</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">02</span>
+            <span class="line-through text-ink-muted font-medium">Webpack + babel</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Bun's bundler</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">03</span>
+            <span class="line-through text-ink-muted font-medium">Styled-components</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Tailwind CSS</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">04</span>
+            <span class="line-through text-ink-muted font-medium">Node + Express</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Go / Rust services</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">05</span>
+            <span class="line-through text-ink-muted font-medium">Firebase lock-in</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">SQLite you own</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">06</span>
+            <span class="line-through text-ink-muted font-medium">GA + Segment + HotJar</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Plausible, one script</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">07</span>
+            <span class="line-through text-ink-muted font-medium">jQuery soup</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Typed, tree-shaken TS</span>
+          </div>
+          <div class="bg-canvas p-6 md:p-7 flex items-center gap-5">
+            <span class="font-mono text-label text-ink-faint shrink-0 w-8">08</span>
+            <span class="line-through text-ink-muted font-medium">Page-builder CMS</span>
+            <span class="text-accent text-xl" aria-hidden="true">→</span>
+            <span class="font-semibold">Git-based content</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section id="work" class="border-b border-line">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
+        <div class="grid md:grid-cols-12 gap-10 mb-16">
+          <div class="md:col-span-4">
+            <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 02 · What we build</span>
+          </div>
+          <h2 data-display class="md:col-span-10 text-display font-black text-balance">
+            Two halves. <span class="text-ink-muted">Engineering rigor</span> and <span
+              class="italic font-serif text-accent">typographic taste</span>.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-px bg-line border border-line rounded-xl overflow-hidden">
+          <div class="bg-canvas p-8 md:p-10">
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-label text-ink-muted">01.A</span>
+              <span class="font-mono text-label text-ink-faint">// technical</span>
+            </div>
+            <h3 class="text-h3 font-bold mb-4">Platform & backend</h3>
+            <p class="text-ink-muted leading-relaxed mb-6">
+              Go services, Rust where throughput matters, SQLite at the edge, Postgres when the data outgrows it. Observability from commit one.
+              Traces, SLOs, error budgets. Boring infra so the interesting work can ship.
+            </p>
+            <ul class="space-y-2 font-mono text-small text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent">→</span> Go / Rust APIs and workers</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> SQL schema design & migrations</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> CI/CD, IaC, reproducible deploys</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> OpenTelemetry, Prometheus, Grafana</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> Edge functions, caching, queues</li>
+            </ul>
+          </div>
+
+          <div class="bg-canvas p-8 md:p-10">
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono text-label text-ink-muted">01.B</span>
+              <span class="font-mono text-label text-ink-faint">// surface</span>
+            </div>
+            <h3 class="text-h3 font-bold mb-4">Interface & front-of-house</h3>
+            <p class="text-ink-muted leading-relaxed mb-6">
+              Vanilla TypeScript. Tailwind CSS. Every animation earns its frames. Every byte justifies itself. Sites that
+              feel hand-tailored because they are, not spun out of a template generator.
+            </p>
+            <ul class="space-y-2 font-mono text-small text-ink-muted">
+              <li class="flex gap-3"><span class="text-accent">→</span> UI/UX design, end-to-end</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> Marketing & product sites</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> Vanilla TS, no framework lock-in</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> Motion that respects reduced-motion</li>
+              <li class="flex gap-3"><span class="text-accent">→</span> A11y and perf treated as features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="border-b border-line bg-canvas-soft/40">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
+        <div class="grid md:grid-cols-12 gap-10 mb-16">
+          <div class="md:col-span-4">
+            <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 03 · Stack</span>
+          </div>
+          <h2 data-display class="md:col-span-10 text-display font-black text-balance">
+            Sharp tools. <span class="text-ink-muted">Few of them.</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="border border-line rounded-xl p-6">
+            <h3 class="font-mono text-label uppercase tracking-[0.2em] text-ink-faint mb-4">Surface</h3>
+            <ul class="space-y-2 text-small">
+              <li class="flex justify-between"><span>TypeScript</span><span
+                  class="text-ink-muted font-mono text-small">strict</span></li>
+              <li class="flex justify-between"><span>Vanilla JS</span><span
+                  class="text-ink-muted font-mono text-small">native</span></li>
+              <li class="flex justify-between"><span>Tailwind CSS</span><span
+                  class="text-ink-muted font-mono text-small">build time</span></li>
+              <li class="flex justify-between"><span>Bun</span><span
+                  class="text-ink-muted font-mono text-small">runtime</span></li>
+            </ul>
+          </div>
+          <div class="border border-line rounded-xl p-6">
+            <h3 class="font-mono text-label uppercase tracking-[0.2em] text-ink-faint mb-4">Platform</h3>
+            <ul class="space-y-2 text-small">
+              <li class="flex justify-between"><span>Go</span><span
+                  class="text-ink-muted font-mono text-small">services</span></li>
+              <li class="flex justify-between"><span>Rust</span><span class="text-ink-muted font-mono text-small">hot
+                  paths</span></li>
+              <li class="flex justify-between"><span>SQLite</span><span
+                  class="text-ink-muted font-mono text-small">primary</span></li>
+              <li class="flex justify-between"><span>PostgreSQL</span><span
+                  class="text-ink-muted font-mono text-small">data-heavy</span></li>
+            </ul>
+          </div>
+          <div class="border border-line rounded-xl p-6">
+            <h3 class="font-mono text-label uppercase tracking-[0.2em] text-ink-faint mb-4">Ops</h3>
+            <ul class="space-y-2 text-small">
+              <li class="flex justify-between"><span>Terraform</span><span
+                  class="text-ink-muted font-mono text-small">IaC</span></li>
+              <li class="flex justify-between"><span>GitHub Actions</span><span
+                  class="text-ink-muted font-mono text-small">CI</span></li>
+              <li class="flex justify-between"><span>Cloudflare</span><span
+                  class="text-ink-muted font-mono text-small">edge</span></li>
+              <li class="flex justify-between"><span>OpenTelemetry</span><span
+                  class="text-ink-muted font-mono text-small">traces</span></li>
+              <li class="flex justify-between"><span>Grafana</span><span
+                  class="text-ink-muted font-mono text-small">obs</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="mt-12 md:mt-16 border border-line rounded-xl p-8 md:p-10 bg-canvas">
+          <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+            <span class="font-mono text-label text-accent uppercase tracking-[0.2em] md:mt-2 shrink-0">Rule of thumb</span>
+            <blockquote class="text-lead font-semibold text-balance">
+              <span class="text-accent">SQLite</span> by default, a key&#8209;value store for lookups, a <span class="text-accent">CDN</span> for everything that never changes. <span class="text-accent">Postgres</span> only when a project lives on its data for years.
+              <span class="block text-ink-muted font-medium mt-3 text-body">Most marketing, CMS and portfolio sites are static files on a CDN, no database at all.</span>
+            </blockquote>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="border-b border-line">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
+        <div class="grid md:grid-cols-12 gap-10 mb-16">
+          <div class="md:col-span-4">
+            <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 04 · Process</span>
+          </div>
+          <h2 data-display class="md:col-span-10 text-display font-black text-balance">
+            Four weeks. <span class="italic font-serif text-accent">Four phases.</span> <span
+              class="text-ink-muted">Nothing in between.</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-px bg-line border border-line rounded-xl overflow-hidden">
+          <div class="bg-canvas p-7 md:p-8 flex flex-col gap-4 md:min-h-[260px]">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-label text-ink-faint">W1</span>
+              <span
+                class="w-7 h-7 rounded-full border border-line grid place-items-center text-label font-mono">01</span>
+            </div>
+            <h3 class="text-h3 font-bold md:mt-auto">Discover</h3>
+            <p class="text-small text-ink-muted">Audit what exists. Interview stakeholders. Map
+              constraints, budgets, SLOs. Write the brief your team never had time to write.</p>
+          </div>
+          <div class="bg-canvas p-7 md:p-8 flex flex-col gap-4 md:min-h-[260px]">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-label text-ink-faint">W2</span>
+              <span
+                class="w-7 h-7 rounded-full border border-line grid place-items-center text-label font-mono">02</span>
+            </div>
+            <h3 class="text-h3 font-bold md:mt-auto">Design</h3>
+            <p class="text-small text-ink-muted">Typography system, component primitives, interaction
+              grammar. Design in-browser, not in static mocks. Ship prototypes by end of week.</p>
+          </div>
+          <div class="bg-canvas p-7 md:p-8 flex flex-col gap-4 md:min-h-[260px]">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-label text-ink-faint">W3</span>
+              <span
+                class="w-7 h-7 rounded-full border border-line grid place-items-center text-label font-mono">03</span>
+            </div>
+            <h3 class="text-h3 font-bold md:mt-auto">Build</h3>
+            <p class="text-small text-ink-muted">Types, tests, telemetry. CI from the first commit. Daily
+              deploys to staging. Page weight tracked on every build, not aspired to.</p>
+          </div>
+          <div class="bg-canvas p-7 md:p-8 flex flex-col gap-4 md:min-h-[260px]">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-label text-ink-faint">W4</span>
+              <span
+                class="w-7 h-7 rounded-full border border-line grid place-items-center text-label font-mono">04</span>
+            </div>
+            <h3 class="text-h3 font-bold md:mt-auto">Handover</h3>
+            <p class="text-small text-ink-muted">Runbooks, dashboards, postmortem templates. Your team
+              inherits a repo they can run. Not a black box we have to babysit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section id="principles" class="border-b border-line">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
+        <div class="grid md:grid-cols-12 gap-10 mb-16">
+          <div class="md:col-span-4">
+            <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 05 · Principles</span>
+          </div>
+          <h2 data-display class="md:col-span-10 text-display font-black text-balance">
+            How we <span class="italic font-serif text-accent">actually</span> work.
+          </h2>
+        </div>
+
+        <ol class="space-y-px">
+          <li class="group grid md:grid-cols-12 gap-6 items-baseline py-8 border-t border-line">
+            <span class="md:col-span-1 font-mono text-label text-ink-faint">01</span>
+            <h3 class="md:col-span-4 text-h3 font-bold">Performance is a feature.</h3>
+            <p class="md:col-span-7 text-ink-muted leading-relaxed">If it doesn't load on a three-year-old phone over a
+              bad train connection, it isn't finished. We weigh every kilobyte and millisecond: whatever a page downloads
+              has to earn its place.</p>
+          </li>
+          <li class="group grid md:grid-cols-12 gap-6 items-baseline py-8 border-t border-line">
+            <span class="md:col-span-1 font-mono text-label text-ink-faint">02</span>
+            <h3 class="md:col-span-4 text-h3 font-bold">Fewer frameworks. Sharper code.</h3>
+            <p class="md:col-span-7 text-ink-muted leading-relaxed">Most sites don't need a 300kb runtime. We reach for
+              vanilla first, add complexity only when it earns its keep, and keep dependencies auditable.</p>
+          </li>
+          <li class="group grid md:grid-cols-12 gap-6 items-baseline py-8 border-t border-line">
+            <span class="md:col-span-1 font-mono text-label text-ink-faint">03</span>
+            <h3 class="md:col-span-4 text-h3 font-bold">Ship it like we own it.</h3>
+            <p class="md:col-span-7 text-ink-muted leading-relaxed">SRE habits come baked in. SLOs, dashboards,
+              runbooks, on-call thinking. We hand over systems our clients can actually operate.</p>
+          </li>
+          <li class="group grid md:grid-cols-12 gap-6 items-baseline py-8 border-t border-b border-line">
+            <span class="md:col-span-1 font-mono text-label text-ink-faint">04</span>
+            <h3 class="md:col-span-4 text-h3 font-bold">Taste isn't optional.</h3>
+            <p class="md:col-span-7 text-ink-muted leading-relaxed">Typography, spacing, motion, copy. All engineered
+              with the same care as the API layer. The surface is the product.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="border-b border-line bg-canvas-soft/40">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-24 md:py-32">
+        <div class="grid md:grid-cols-12 gap-10 mb-16">
+          <div class="md:col-span-4">
+            <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 06 · FAQ</span>
+          </div>
+          <h2 data-display class="md:col-span-10 text-display font-black text-balance">
+            Things we get asked <span class="italic font-serif text-accent">every week</span>.
+          </h2>
+        </div>
+
+        <div class="divide-y divide-line border-t border-b border-line">
+          <details class="group py-6 md:py-7">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer list-none">
+              <span class="text-h3 font-semibold">Why no React / Next / Vue?</span>
+              <span aria-hidden="true"
+                class="shrink-0 w-8 h-8 rounded-full border border-line grid place-items-center text-ink-muted group-open:rotate-45 group-open:border-accent group-open:text-accent transition-all">+</span>
+            </summary>
+            <p class="mt-4 text-ink-muted leading-relaxed max-w-3xl">Because most websites are not applications. A
+              marketing site, a docs hub, a portfolio. None of these need a client-side router and a 120kb runtime.
+              Vanilla TypeScript plus a light static generator gets you to parity on features and beats anything
+              framework-based on load time. When an over-engineered SPA is genuinely the right tool, we will tell you, and pick one.</p>
+          </details>
+          <details class="group py-6 md:py-7">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer list-none">
+              <span class="text-h3 font-semibold">Can you work with our existing stack?</span>
+              <span aria-hidden="true"
+                class="shrink-0 w-8 h-8 rounded-full border border-line grid place-items-center text-ink-muted group-open:rotate-45 group-open:border-accent group-open:text-accent transition-all">+</span>
+            </summary>
+            <p class="mt-4 text-ink-muted leading-relaxed max-w-3xl">Yes. We have shipped inside Next.js, Laravel,
+              Rails, Django, Flask, and a handful of in-house Go monoliths. The stack is a constraint, not a problem. We
+              audit, fit in, and leave it tidier than we found it.</p>
+          </details>
+          <details class="group py-6 md:py-7">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer list-none">
+              <span class="text-h3 font-semibold">How small is "small"? How fast is
+                "fast"?</span>
+              <span aria-hidden="true"
+                class="shrink-0 w-8 h-8 rounded-full border border-line grid place-items-center text-ink-muted group-open:rotate-45 group-open:border-accent group-open:text-accent transition-all">+</span>
+            </summary>
+            <p class="mt-4 text-ink-muted leading-relaxed max-w-3xl">Small is a rule, not a number: every byte a page
+              downloads has to show up on screen or make the page work, and nothing loads before it is needed. Fast is
+              LCP under 1 second on 4G, and we aim for Lighthouse 100 across all four pillars at launch. Real numbers,
+              measured on every build.</p>
+          </details>
+          <details class="group py-6 md:py-7">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer list-none">
+              <span class="text-h3 font-semibold">Do you offer ongoing support?</span>
+              <span aria-hidden="true"
+                class="shrink-0 w-8 h-8 rounded-full border border-line grid place-items-center text-ink-muted group-open:rotate-45 group-open:border-accent group-open:text-accent transition-all">+</span>
+            </summary>
+            <p class="mt-4 text-ink-muted leading-relaxed max-w-3xl">Yes. Retainers for content updates, perf
+              regressions, and on-call rotation. Most clients keep a small monthly envelope so we can ship fixes the day
+              they are needed. The <a href="/work/projects/deep-estate-agency/" class="text-ink underline decoration-accent underline-offset-4 hover:text-accent">DEEP Estate Agency uplift</a> shows what that looks like.</p>
+          </details>
+          <details class="group py-6 md:py-7">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer list-none">
+              <span class="text-h3 font-semibold">Pricing?</span>
+              <span aria-hidden="true"
+                class="shrink-0 w-8 h-8 rounded-full border border-line grid place-items-center text-ink-muted group-open:rotate-45 group-open:border-accent group-open:text-accent transition-all">+</span>
+            </summary>
+            <p class="mt-4 text-ink-muted leading-relaxed max-w-3xl">Fixed-fee per project, scoped after the discovery
+              week. No hidden line items, no licence taxes, no per-seat tooling you inherit. If the scope moves, we
+              re-quote before work continues.</p>
+          </details>
+          <details class="group py-6 md:py-7">
+            <summary class="flex items-center justify-between gap-6 cursor-pointer list-none">
+              <span class="text-h3 font-semibold">Is AI writing the code?</span>
+              <span aria-hidden="true"
+                class="shrink-0 w-8 h-8 rounded-full border border-line grid place-items-center text-ink-muted group-open:rotate-45 group-open:border-accent group-open:text-accent transition-all">+</span>
+            </summary>
+            <p class="mt-4 text-ink-muted leading-relaxed max-w-3xl">We use LLMs like any other sharp tool. Scaffolding,
+              boilerplate, reviews. The architecture, the taste calls, and the final byte you ship are human decisions.
+              Nothing lands in main without a person behind it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-6 md:px-10 py-28 md:py-40">
+        <span class="font-mono text-label text-ink-faint uppercase tracking-[0.2em]">§ 07 · Say hello</span>
+
+        <h2
+          data-display class="mt-6 font-black text-balance text-display-xl">
+          Got a project that <span class="italic font-serif text-accent">deserves</span> better than a template?
+        </h2>
+
+        <!-- The address gets a row of its own and scales with the viewport to fill it: beside the details it ran into them between tablet and wide desktop. -->
+        <div class="mt-16 grid gap-10">
+          <div>
+            <p class="font-mono text-label text-ink-faint uppercase tracking-[0.2em] mb-3">Write to us</p>
+            <a id="contact-link" href="mailto:contact@blackbao.studio"
+              data-display class="group inline-flex items-baseline flex-wrap gap-3 text-display font-black hover:text-accent transition-colors">
+              <span>contact@blackbao.studio</span>
+              <span class="text-ink-faint group-hover:text-accent transition-colors text-[0.45em]" aria-hidden="true">↗</span>
+            </a>
+            <button id="copy-email" type="button"
+              class="mt-5 inline-flex items-center gap-2 text-small font-mono text-ink-muted hover:text-ink transition-colors"
+              aria-label="Copy address to clipboard" data-email="contact@blackbao.studio">
+              <svg aria-hidden="true" class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5.75" y="5.75" width="8.5" height="8.5" rx="2" />
+                <path d="M10.25 5.75V3.75a2 2 0 0 0-2-2H3.75a2 2 0 0 0-2 2v4.5a2 2 0 0 0 2 2h2" />
+              </svg>
+              <span data-copy-label>copy address</span>
+            </button>
+          </div>
+
+          <dl class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-small">
+            <div>
+              <dt class="text-ink-faint uppercase tracking-[0.2em] text-label mb-1">Based</dt>
+              <dd>Alicante, ES</dd>
+            </div>
+            <div>
+              <dt class="text-ink-faint uppercase tracking-[0.2em] text-label mb-1">Timezone</dt>
+              <dd>UTC+1 / +2</dd>
+            </div>
+            <div>
+              <dt class="text-ink-faint uppercase tracking-[0.2em] text-label mb-1">Booking</dt>
+              <dd>Q1 / Q2 2027 open</dd>
+            </div>
+            <div>
+              <dt class="text-ink-faint uppercase tracking-[0.2em] text-label mb-1">Languages</dt>
+              <dd>EN · ES · FR</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-line">
+    <div
+      class="mx-auto max-w-7xl px-6 md:px-10 pt-10 pb-[max(--spacing(10),var(--sh-keymap-clear,0px))] flex flex-col md:flex-row gap-6 md:gap-10 items-start md:items-center justify-between text-small text-ink-muted font-mono">
+      <div class="flex items-center gap-3">
+        <span class="inline-block w-3 h-3 rounded-full bg-ink"></span>
+        <span>© <span id="year">2026</span> · Black Bao Studio</span>
+      </div>
+      <div class="flex flex-wrap gap-x-8 gap-y-2">
+        <a href="mailto:contact@blackbao.studio" class="hover:text-ink transition-colors">contact@blackbao.studio</a>
+        <span>built with bun · vanilla ts · tailwindcss · webgl2</span>
+        <span id="page-weight" class="text-ink-faint" hidden></span>
+      </div>
+    </div>
+  </footer>
+  <div class="sh" data-shell>
+  <div class="sh-menu" id="sh-menu" data-menu>
+  <div class="sh-menu__wrap" data-menu-wrap>
+    <div class="sh-menu__anchor">
+      <nav class="sh-menu__mover" aria-label="Site" data-menu-mover>
+        <a href="https://github.com/blackbaostudio" class="sh-ring sh:bg-white sh:text-black" style="--i:6" data-ring="6" tabindex="-1" aria-label="GITHUB (new tab)" data-hotkey="G" target="_blank" rel="noopener"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>GITHUB</span></span></a>
+        <a href="/blog/" class="sh-ring sh:bg-black sh:text-white" style="--i:5" data-ring="5" tabindex="-1" aria-label="BLOG" data-hotkey="B"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>BLOG</span></span></a>
+        <a href="/work/" class="sh-ring sh:bg-white sh:text-black" style="--i:4" data-ring="4" tabindex="-1" aria-label="WORK" data-hotkey="W"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>WORK</span></span></a>
+        <a href="/apps/" class="sh-ring sh:bg-black sh:text-white" style="--i:3" data-ring="3" tabindex="-1" aria-label="APPS" data-hotkey="A"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>APPS</span></span></a>
+        <a href="/" class="sh-ring sh:bg-white sh:text-black" style="--i:2" data-ring="2" tabindex="-1" aria-label="HOME" data-hotkey="H"><span class="sh-ring__band" data-ring-band><span class="sh-ring__label" data-ring-label>HOME</span></span></a>
+        <button type="button" class="sh-ring sh:bg-black sh:text-white" style="--i:1" data-ring="1" aria-label="Menu" aria-expanded="false" aria-controls="sh-menu" data-menu-toggle><span class="sh-ring__band" data-ring-band><span class="sh-ring__label sh-ring__label--x" data-ring-label><svg viewBox="0 0 13 13" aria-hidden="true"><line x1="0.375" y1="6.5" x2="12.625" y2="6.5"/><line x1="6.5" y1="0.375" x2="6.5" y2="12.625"/></svg></span></span></button>
+      </nav>
+    </div>
+  </div>
+</div>
+  <div class="sh-phone" data-phone></div>
+  <div class="sh-profile" id="sh-profile" inert data-profile>
+  <canvas class="sh-profile__hole" data-profile-hole></canvas>
+  <div class="sh-profile__panel" role="dialog" aria-modal="true" aria-label="Black Bao Studio">
+    <div class="sh-profile__inner">
+      <p class="sh-reveal sh-profile__text">Black Bao Studio, a small studio in Alicante crafting meticulously engineered websites. SRE-grade reliability, on-point UI/UX, zero framework bloat. We aim to make every byte you download worth it.</p>
+      <p class="sh-reveal sh-profile__label sh-profile__gap" style="--d:0.09s"><span>Aiming for Lighthouse 100 · every byte earns its download · no frameworks</span></p>
+      <ul class="sh-profile__links sh-profile__gap">
+        <li><a href="https://github.com/blackbaostudio" target="_blank" rel="noopener" class="sh-reveal sh-profile__label" style="--d:0.18s">GitHub</a></li>
+        <li><a href="mailto:contact@blackbao.studio" class="sh-reveal sh-profile__label" style="--d:0.27s" data-profile-last>Email</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <button type="button" class="sh-keymap" aria-controls="sh-help" aria-expanded="false" data-keymap><key class="sh-key" style="--value:'?'"><span class="sh:sr-only">?</span></key><span class="sh-keymap__label">keymap</span></button>
+  <div class="sh-help" id="sh-help" role="dialog" aria-modal="true" aria-labelledby="sh-help-title" inert data-help>
+  <div class="sh-help__card">
+    <h2 class="sh-help__title" id="sh-help-title">Keymap</h2>
+    <dl class="sh-help__list">
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'H'"><span class="sh:sr-only">H</span></key></dt><dd>Home</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'A'"><span class="sh:sr-only">A</span></key></dt><dd>Apps</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'W'"><span class="sh:sr-only">W</span></key></dt><dd>Work</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'B'"><span class="sh:sr-only">B</span></key></dt><dd>Blog</dd></div><div><dt><key class="sh-key sh-key--sm" style="--value:'G'"><span class="sh:sr-only">G</span></key></dt><dd>GitHub (new tab)</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'M'"><span class="sh:sr-only">M</span></key></dt><dd>Open or close the menu</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'P'"><span class="sh:sr-only">P</span></key></dt><dd>Pick up the phone: who we are</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'?'"><span class="sh:sr-only">?</span></key></dt><dd>This keymap</dd></div>
+      <div><dt><key class="sh-key sh-key--sm" style="--value:'Esc'"><span class="sh:sr-only">Esc</span></key></dt><dd>Close whatever is open</dd></div>
+    </dl>
+    <dl class="sh-help__list" data-help-section></dl>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
