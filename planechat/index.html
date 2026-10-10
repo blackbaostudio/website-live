@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>PlaneChat · Support · Black Bao Studio</title>
+  <meta name="description" content="Help for PlaneChat, an offline chat app for iPhone: getting connected, chatting, rooms, friends and privacy." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root { --bg: #0a0a0a; --ink: #f4f1ea; --muted: #a8a49b; --line: #262420; --accent: #8fb0ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+    a { color: var(--accent); }
+    .eyebrow { font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+    h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1; letter-spacing: -.035em; margin: 0 0 12px; }
+    h2 { font-size: 1.3rem; letter-spacing: -.02em; margin: 40px 0 8px; }
+    .lede { color: var(--muted); font-size: 1.1rem; margin: 0; }
+    .contact { border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; margin: 32px 0 8px; }
+    .contact p { margin: 0; }
+    details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+    summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+    details p, details ol, details ul { color: var(--ink); margin: 8px 0 4px; }
+    footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 20px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    footer a { min-height: 44px; display: inline-flex; align-items: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">PlaneChat · Support</p>
+    <h1>Chat with people nearby, no internet needed.</h1>
+    <p class="lede">PlaneChat connects iPhones directly over Bluetooth and peer-to-peer Wi-Fi, and passes messages phone to phone to reach people further away.</p>
+
+    <div class="contact">
+      <p>Something not working, or an idea? Email <a href="mailto:noelruault.engineer@gmail.com?subject=PlaneChat%20support">noelruault.engineer@gmail.com</a> with your iPhone model and iOS version.</p>
+    </div>
+
+    <h2>Getting connected</h2>
+    <details open>
+      <summary>Nobody shows up on the Nearby screen</summary>
+      <ol>
+        <li>Make sure the other person has PlaneChat open too.</li>
+        <li>In airplane mode, switch Wi-Fi and Bluetooth back on from Control Center. You don't need to join a network.</li>
+        <li>Check Settings → PlaneChat and allow Bluetooth and Local Network.</li>
+        <li>In PlaneChat's Settings, check that at least one radio is on, and that "Who can see me" is set the way you want.</li>
+      </ol>
+    </details>
+    <details>
+      <summary>How far does it reach?</summary>
+      <p>Directly, about the length of a room or a few rows of seats. Beyond that, other phones running PlaneChat pass your message along, so a busy space can carry it much further. Every phone with relaying on helps.</p>
+    </details>
+    <details>
+      <summary>Does it work in the background?</summary>
+      <p>Bluetooth keeps working in a limited way while the app is in the background. Peer-to-peer Wi-Fi only works while PlaneChat is open, so keep it on screen when you're waiting for a reply.</p>
+    </details>
+
+    <h2>Chatting</h2>
+    <details>
+      <summary>Why do I have to ask before chatting?</summary>
+      <p>Nobody can message you until you accept their "Wanna chat?" request, so strangers can't spam you. Friends can message you straight away.</p>
+    </details>
+    <details>
+      <summary>What do the ticks mean?</summary>
+      <p>A clock means the message is on its way; two ticks mean the other phone received and decrypted it. Messages can take a moment when they travel through other phones.</p>
+    </details>
+    <details>
+      <summary>Can I edit a message?</summary>
+      <p>Yes. Touch and hold one of your messages and choose Edit. Everyone in the chat sees it marked "Edited", and can see every earlier version under Edit history.</p>
+    </details>
+    <details>
+      <summary>Rooms and friends</summary>
+      <p>"Everyone on board" is a public room for everyone nearby. Private rooms are created by typing the same code on each phone; only people with the code can read them. Touch and hold someone's bubble to add them as a friend.</p>
+    </details>
+    <details>
+      <summary>How do I know I'm talking to the right person?</summary>
+      <p>Each chat shows a short code. Compare it in person, or ask about something only the two of you know.</p>
+    </details>
+    <details>
+      <summary>Where are my messages saved?</summary>
+      <p>They aren't. Conversations live in memory and disappear when you close the app. See the <a href="/planechat/privacy/">privacy policy</a> for the details.</p>
+    </details>
+
+    <footer>
+      <a href="/planechat/privacy/">Privacy policy</a>
+      <a href="/">Black Bao Studio</a>
+      <a href="mailto:contact@blackbao.studio">contact@blackbao.studio</a>
+    </footer>
+  </main>
+</body>
+</html>

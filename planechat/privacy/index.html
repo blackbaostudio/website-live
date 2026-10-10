@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>PlaneChat · Privacy Policy · Black Bao Studio</title>
+  <meta name="description" content="Privacy policy for PlaneChat, an offline chat app for iPhone. No account, no servers, no tracking." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root { --bg: #0a0a0a; --ink: #f4f1ea; --muted: #a8a49b; --line: #262420; --accent: #8fb0ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+    a { color: var(--accent); }
+    .eyebrow { font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+    h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1; letter-spacing: -.035em; margin: 0 0 12px; }
+    h2 { font-size: 1.3rem; letter-spacing: -.02em; margin: 40px 0 8px; }
+    p, li { color: var(--ink); }
+    .lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 8px; }
+    .summary { border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; margin: 32px 0 8px; }
+    .summary ul { margin: 0; padding-left: 20px; }
+    footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 20px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    footer a { min-height: 44px; display: inline-flex; align-items: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">PlaneChat · Privacy Policy</p>
+    <h1>Your messages never touch a server.</h1>
+    <p class="lede">Effective 10 October 2026. PlaneChat is made by Black Bao Studio (Noël Ruault Martínez).</p>
+
+    <div class="summary">
+      <ul>
+        <li>No account, no phone number, no email.</li>
+        <li>No servers, no internet requests, no analytics, no ads, no tracking, no third-party code.</li>
+        <li>We, the developer, collect nothing and can see nothing.</li>
+      </ul>
+    </div>
+
+    <h2>How PlaneChat works</h2>
+    <p>PlaneChat sends messages directly between nearby phones over Bluetooth and peer-to-peer Wi-Fi. When the person you're writing to is out of range, other phones running PlaneChat pass the message along. Nothing goes through the internet or through any computer we run.</p>
+
+    <h2>What stays on your phone</h2>
+    <ul>
+      <li><strong>Your identity keys</strong>, created on your phone the first time you open the app, stored in the iOS Keychain with "this device only" protection, so they are never synced to iCloud or restored to another device.</li>
+      <li><strong>Your settings</strong>: the name you chose, who can see you, whether your phone relays, which radios are on, your friends list and the private rooms you joined.</li>
+      <li><strong>Your conversations</strong> are kept only in memory while the app runs. They are not saved to storage and disappear when the app is closed.</li>
+    </ul>
+    <p>Deleting the app deletes your settings and conversations. iOS may keep the Keychain identity until you reset the phone; it is never sent anywhere.</p>
+
+    <h2>What nearby phones receive</h2>
+    <ul>
+      <li><strong>Your name and public key.</strong> With visibility set to "Everyone", phones nearby that run PlaneChat see the name you chose and a public key, so they can show your bubble. With "Friends only", this is sent sealed to your friends and nobody else can see you.</li>
+      <li><strong>Your messages, end-to-end encrypted.</strong> Private chats can only be read by you and the other person. Phones that relay them can't read them or see who they're for. Private-room messages can only be read by people who know the room's code.</li>
+      <li><strong>Relayed messages are held briefly.</strong> To reach someone who walks back into range, a relaying phone keeps sealed messages it can't read in memory for up to 20 minutes, then drops them. You can turn relaying off in Settings.</li>
+      <li><strong>The public room</strong> ("Everyone on board") is readable by anyone nearby running PlaneChat. Don't share anything there you wouldn't say out loud.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Bluetooth</strong>: to find and talk to nearby phones.</li>
+      <li><strong>Local Network</strong>: to talk to nearby phones over peer-to-peer Wi-Fi.</li>
+    </ul>
+    <p>PlaneChat doesn't ask for your location, contacts, photos, camera or microphone.</p>
+
+    <h2>Children</h2>
+    <p>PlaneChat is not directed at children under 13 and collects no personal data from anyone.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be published on this page with a new effective date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy: <a href="mailto:noelruault.engineer@gmail.com?subject=PlaneChat%20privacy">noelruault.engineer@gmail.com</a>.</p>
+
+    <footer>
+      <a href="/planechat/">PlaneChat support</a>
+      <a href="/">Black Bao Studio</a>
+      <a href="mailto:contact@blackbao.studio">contact@blackbao.studio</a>
+    </footer>
+  </main>
+</body>
+</html>
