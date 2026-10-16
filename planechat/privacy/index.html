@@ -29,7 +29,7 @@
   <main>
     <p class="eyebrow">PlaneChat · Privacy Policy</p>
     <h1>Your messages never touch a server.</h1>
-    <p class="lede">Effective 10 October 2026. PlaneChat is made by Black Bao Studio (Noël Ruault Martínez).</p>
+    <p class="lede">Effective 16 October 2026. PlaneChat is made by Black Bao Studio (Noël Ruault Martínez).</p>
 
     <div class="summary">
       <ul>
@@ -45,8 +45,9 @@
     <h2>What stays on your phone</h2>
     <ul>
       <li><strong>Your identity keys</strong>, created on your phone the first time you open the app, stored in the iOS Keychain with "this device only" protection, so they are never synced to iCloud or restored to another device.</li>
-      <li><strong>Your settings</strong>: the name you chose, who can see you, whether your phone relays, which radios are on, your friends list and the private rooms you joined.</li>
-      <li><strong>Your conversations</strong> are kept only in memory while the app runs. They are not saved to storage and disappear when the app is closed.</li>
+      <li><strong>Your settings</strong>: the name you chose, who can see you, whether your phone relays, which radios are on, your friends and blocked lists, the people you accepted in the public room, the private rooms you joined, and which version of the Terms you agreed to.</li>
+      <li><strong>Your conversations</strong> are saved on this phone, encrypted with a key kept in the Keychain on this device only, and left out of backups. The newest 1,024 messages and their edits are kept. Delete them by swiping a chat in Chats, by deleting single messages, from Settings → Delete all chats, or by deleting the app. Deletion is not a forensic wipe.</li>
+      <li><strong>A stranger's public-room messages</strong> that you haven't accepted are held in memory only, never saved, and are gone when the app closes.</li>
     </ul>
     <p>Deleting the app deletes your settings and conversations. iOS may keep the Keychain identity until you reset the phone; it is never sent anywhere.</p>
 
@@ -55,21 +56,22 @@
       <li><strong>Your name and public key.</strong> With visibility set to "Everyone", phones nearby that run PlaneChat see the name you chose and a public key, so they can show your bubble. With "Friends only", this is sent sealed to your friends and nobody else can see you.</li>
       <li><strong>Your messages, end-to-end encrypted.</strong> Private chats can only be read by you and the other person. Phones that relay them can't read them or see who they're for. Private-room messages can only be read by people who know the room's code.</li>
       <li><strong>Relayed messages are held briefly.</strong> To reach someone who walks back into range, a relaying phone keeps sealed messages it can't read in memory for up to 20 minutes, then drops them. You can turn relaying off in Settings.</li>
-      <li><strong>The public room</strong> ("Everyone on board") is readable by anyone nearby running PlaneChat. Don't share anything there you wouldn't say out loud.</li>
+      <li><strong>The public room</strong> ("Everyone in range") can be received by any phone nearby running PlaneChat. Each person only sees your messages after accepting you, but anyone can accept. Don't share anything there you wouldn't say out loud.</li>
     </ul>
 
     <h2>Reports</h2>
-    <p>If you report someone, PlaneChat opens an email in your mail app addressed to us, filled in with the reported person's name, their code and, when you report a message, its text and time. Nothing is sent unless you send that email yourself. We use reports only to deal with abuse and delete them once handled.</p>
+    <p>If you report someone, PlaneChat first shows what the report contains: the reported person's name, their code and public key and, when you report a message, its original text, time and message ID, plus anything you add. It then opens an email to us, or lets you copy or share the report if your phone has no Mail account. Nothing is sent unless you send it yourself. We use reports only to deal with abuse and delete them once handled.</p>
 
     <h2>Permissions</h2>
     <ul>
       <li><strong>Bluetooth</strong>: to find and talk to nearby phones.</li>
       <li><strong>Local Network</strong>: to talk to nearby phones over peer-to-peer Wi-Fi.</li>
+      <li><strong>Notifications</strong>, optional: to tell you when someone asks to chat or messages you while PlaneChat is in the background. Message previews can be turned off in Settings.</li>
     </ul>
     <p>PlaneChat doesn't ask for your location, contacts, photos, camera or microphone.</p>
 
-    <h2>Children</h2>
-    <p>PlaneChat is not directed at children under 13 and collects no personal data from anyone.</p>
+    <h2>Age</h2>
+    <p>PlaneChat is for people 18 and older and collects no personal data from anyone.</p>
 
     <h2>Changes</h2>
     <p>If this policy changes, the new version will be published on this page with a new effective date.</p>
